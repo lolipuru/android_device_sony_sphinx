@@ -733,36 +733,6 @@ service fstman_wlan0 /vendor/bin/fstman -B -ddd -c /data/vendor/wifi/fstman.ini 
     disabled
     oneshot
 
-service dhcpcd_wlan0 /system/bin/dhcpcd -ABKLG
-    class late_start
-    disabled
-    oneshot
-
-service dhcpcd_bond0 /system/bin/dhcpcd -ABKLG
-    class late_start
-    disabled
-    oneshot
-
-service dhcpcd_p2p /system/bin/dhcpcd -ABKLG
-    class late_start
-    disabled
-    oneshot
-
-service iprenew_wlan0 /system/bin/dhcpcd -n
-    class late_start
-    disabled
-    oneshot
-
-service iprenew_bond0 /system/bin/dhcpcd -n
-    class late_start
-    disabled
-    oneshot
-
-service iprenew_p2p /system/bin/dhcpcd -n
-    class late_start
-    disabled
-    oneshot
-
 service ptt_socket_app /system/vendor/bin/ptt_socket_app -d
     class main
     user wifi
@@ -806,16 +776,6 @@ service cnss-daemon /system/vendor/bin/cnss-daemon -n -l
 
 on property:sys.shutdown.requested=*
     stop cnss-daemon
-
-service dhcpcd_bt-pan /system/bin/dhcpcd -BKLG
-    class late_start
-    disabled
-    oneshot
-
-service iprenew_bt-pan /system/bin/dhcpcd -n
-    class late_start
-    disabled
-    oneshot
 
 #service ssgqmigd /vendor/bin/ssgqmigd
 #    class late_start
