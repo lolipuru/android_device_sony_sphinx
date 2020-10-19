@@ -28,9 +28,6 @@ on early-init
     
 
 on init
-    # Load persistent dm-verity state
-    verity_load_state
-
     # SONY: Start the TrimArea Daemon. It must be started before fota-ua
     wait /dev/block/platform/soc/1d84000.ufshc
     symlink /dev/block/platform/soc/1d84000.ufshc /dev/block/bootdevice
