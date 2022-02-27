@@ -80,6 +80,10 @@ BOARD_MKBOOTIMG_ARGS += \
 	--dtb_offset $(BOARD_DTB_OFFSET) \
 	--header_version $(BOARD_BOOT_HEADER_VERSION)
 
+TARGET_KERNEL_ADDITIONAL_FLAGS := \
+    DTC_OVERLAY_TEST_EXT=$(shell pwd)/prebuilts/misc/$(HOST_OS)-x86/libufdt/ufdt_apply_overlay \
+    LLVM=1 LLVM_IAS=1
+
 # Platform
 TARGET_BOARD_PLATFORM := msmnile
 
