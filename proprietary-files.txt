@@ -1824,8 +1824,6 @@ vendor/etc/init/sct_service.rc
 
 # USB
 vendor/etc/init/init.sony.usb.rc
-vendor/etc/init/hw/init.qcom.usb.rc
-vendor/etc/init/hw/init.msm.usb.configfs.rc
 
 # VPP
 vendor/bin/vppservice
