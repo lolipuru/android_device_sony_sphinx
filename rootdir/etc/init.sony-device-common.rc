@@ -10,6 +10,7 @@ on boot
     write /sys/devices/virtual/sec/tsp/after_work 1
 
     chown system system /sys/devices/virtual/sec/tsp/module_id
+    chown system system /sys/devices/dsi_panel_driver/pre_sod_mode
     chmod 0600 /sys/devices/virtual/sec/tsp/module_id
     restorecon /sys/devices/virtual/sec/tsp/module_id
 
