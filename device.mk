@@ -187,6 +187,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.lights-service.sony_sphinx
 
+# LiveDisplay
+PRODUCT_PACKAGES += \
+    vendor.lineage.livedisplay-service.sony
+
 # Media
 PRODUCT_PACKAGES += \
     libc2dcolorconvert \
