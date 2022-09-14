@@ -72,6 +72,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES_DEBUG += \
     bootctl
 
+# Configstore
+PRODUCT_PACKAGES += \
+	disable_configstore
+
 # IPACM
 PRODUCT_PACKAGES += \
     ipacm \
