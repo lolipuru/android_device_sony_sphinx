@@ -257,6 +257,7 @@ PRODUCT_COPY_FILES += \
 
 # Light
 PRODUCT_PACKAGES += \
+    android.hardware.lights-service.sony_sphinx \
     android.hardware.light@2.0.vendor
 
 # Media
