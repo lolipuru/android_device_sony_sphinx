@@ -43,6 +43,11 @@ AB_OTA_POSTINSTALL_CONFIG += \
 PRODUCT_PACKAGES += \
     otapreopt_script
 
+# Rootdir
+PRODUCT_PACKAGES += \
+    fstab.qcom \
+    fstab.qcom.ramdisk
+
 # Update engine
 PRODUCT_PACKAGES += \
     update_engine \
