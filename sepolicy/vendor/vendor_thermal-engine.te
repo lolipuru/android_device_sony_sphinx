@@ -1,0 +1,6 @@
+get_prop(vendor_thermal-engine, vendor_somc_camera_prop)
+set_prop(vendor_thermal-engine, vendor_somc_thermal_prop)
+
+unix_socket_connect(vendor_thermal-engine, illumination_service, illumination_service)
+allow vendor_thermal-engine vendor_file:file r_file_perms;
+

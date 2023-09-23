@@ -1,0 +1,14 @@
+type hal_somc_charger_daemon, domain;
+type hal_somc_charger_daemon_exec, exec_type, vendor_file_type, file_type;
+
+init_daemon_domain(hal_somc_charger_daemon)
+add_hwservice(hal_somc_charger_daemon, hal_somc_charger_hwservice)
+
+allow hal_somc_charger_daemon vendor_sysfs_battery_supply:dir search;
+allow hal_somc_charger_daemon vendor_sysfs_battery_supply:file { write getattr open };
+
+allow hal_somc_charger_daemon hal_somc_charger_daemon:property_service set;
+hwbinder_use(hal_somc_charger_daemon)
+get_prop(hal_somc_charger_daemon, hwservicemanager_prop)
+
+set_prop(hal_somc_charger_daemon, hal_somc_charger_prop)

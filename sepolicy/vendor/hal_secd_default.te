@@ -1,0 +1,2 @@
+allow vendor_hal_secd_default mnt_vendor_file:dir rw_dir_perms;
+allow vendor_hal_secd_default mnt_vendor_file:file create_file_perms;

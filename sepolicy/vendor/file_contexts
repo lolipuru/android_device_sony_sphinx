@@ -1,0 +1,27 @@
+# Block devices
+/dev/block/platform/soc/1d84000\.ufshc/by-name/system             u:object_r:system_block_device:s0
+/dev/block/platform/soc/1d84000\.ufshc/by-name/vendor             u:object_r:system_block_device:s0
+/dev/block/platform/soc/1d84000\.ufshc/by-name/oem                u:object_r:system_block_device:s0
+
+# Executable
+/(vendor|system/vendor|odm|vendor/odm)/bin/chg-pwr-service        u:object_r:chg_pwr_service_exec:s0
+/(vendor|system/vendor)/bin/hw/illumination_service               u:object_r:illumination_service_exec:s0
+
+# Data files
+/data/vendor/illumination_service(/.*)?   u:object_r:illumination_service_data_file:s0
+
+# Devices
+/dev/socket/illumination                                  u:object_r:illumination_service_socket:s0
+
+# HALs
+/(vendor|system/vendor|odm|vendor/odm)/bin/hw/android\.hardware\.lights-service\.sony_sphinx                u:object_r:hal_light_default_exec:s0
+/(vendor|system/vendor|odm|vendor/odm)/bin/hw/vendor\.semc\.hardware\.secd@1\.0-service                     u:object_r:vendor_hal_secd_default_exec:s0
+/(vendor|system/vendor|odm|vendor/odm)/bin/hw/vendor\.semc\.hardware\.charger@1\.0-service                  u:object_r:hal_somc_charger_daemon_exec:s0
+/(vendor|system/vendor)/bin/sct_service                                                                     u:object_r:sct_service_exec:s0
+
+# Shell scripts
+/(vendor|system/vendor|odm|vendor/odm)/bin/sensors_json_transfer\.sh       u:object_r:vendor_qti_init_shell_exec:s0
+
+# Sys files
+/sys/devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-02/c440000.qcom,spmi:qcom,pm8150b@2:qcom,qpnp-smb5/somc_[a-z0-9_]+       u:object_r:vendor_sysfs_smb_device:s0
+

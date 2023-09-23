@@ -1,0 +1,1 @@
+allow rild tad_socket:dir write;
