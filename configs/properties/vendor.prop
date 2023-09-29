@@ -81,6 +81,9 @@ persist.vendor.qcom.bluetooth.twsp_state.enabled=false
 ro.bluetooth.a2dp_offload.supported=true
 ro.vendor.bluetooth.wipower=false
 
+# Camera
+persist.log.tag.libsonyec=E
+
 # Chipset
 ro.soc.manufacturer=Qualcomm
 ro.soc.model=SM8150
