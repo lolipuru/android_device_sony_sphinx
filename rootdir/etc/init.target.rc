@@ -161,7 +161,7 @@ on property:sys.shutdown.requested=*
     stop vendor.per_proxy
     stop vendor.ims_rtp_daemon
 
-on charger
+on property:init.svc.vendor.charger=running
 #    start vendor.hvdcp_opti
     start vendor.power_off_alarm
     setprop vendor.usb.controller a600000.dwc3
