@@ -55,10 +55,14 @@ on init
     chown cameraserver cameraserver /dev/cpuset/camera-daemon/tasks
     chmod 0660 /dev/cpuset/camera-daemon/tasks
 
+on early-fs
+    start vold
+
 on fs
     wait /dev/block/platform/soc/1d84000.ufshc
     symlink /dev/block/platform/soc/1d84000.ufshc /dev/block/bootdevice
-    mount_all /vendor/etc/fstab.qcom
+    start hwservicemanager
+    mount_all /vendor/etc/fstab.qcom --early
     chown root system /mnt/vendor/persist
     chmod 0771 /mnt/vendor/persist
     restorecon_recursive /mnt/vendor/persist
@@ -73,6 +77,9 @@ on post-fs
     write /dev/ipa 1
 #    start vendor.spdaemon
     start vendor.sec_nvm
+
+on late-fs
+    mount_all /vendor/etc/fstab.qcom --late
 
 on post-fs-data
     mkdir /vendor/data/tombstones 0771 system system
