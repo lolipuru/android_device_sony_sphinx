@@ -191,6 +191,7 @@ TARGET_USERIMAGES_USE_F2FS := true
 
 # Sepolicy
 include device/qcom/sepolicy_vndr/SEPolicy.mk
+include device/lineage/sepolicy/libperfmgr/sepolicy.mk
 include hardware/sony/sepolicy/qti/SEPolicy.mk
 
 # Verified Boot
