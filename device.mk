@@ -243,6 +243,7 @@ PRODUCT_COPY_FILES += \
 
 # RIL
 PRODUCT_PACKAGES += \
+    android.hardware.radio-service.compat \
     extphonelib \
     extphonelib.xml \
     libprotobuf-cpp-full \
