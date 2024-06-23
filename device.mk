@@ -68,6 +68,12 @@ PRODUCT_PACKAGES += \
     init.sony.sensors.rc \
     ueventd.qcom.rc
 
+# Symlink
+PRODUCT_PACKAGES += \
+    firmware_wlan_mac.bin_symlink \
+    firmware_WCNSS_qcom_cfg.ini_symlink \
+	firmware_bdwlan.bin_symlink
+
 # Update engine
 PRODUCT_PACKAGES += \
     update_engine \
