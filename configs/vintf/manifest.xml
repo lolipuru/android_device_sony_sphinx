@@ -313,11 +313,6 @@
         <transport>hwbinder</transport>
         <fqname>@1.0::IComponentStore/default</fqname>
     </hal>
-	<hal format="hidl">
-        <name>android.hardware.memtrack</name>
-        <transport>hwbinder</transport>
-        <fqname>@1.0::IMemtrack/default</fqname>
-    </hal>
     <hal format="hidl">
       <name>android.hardware.drm</name>
       <transport>hwbinder</transport>
