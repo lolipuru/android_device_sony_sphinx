@@ -205,6 +205,8 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('android.hardware.radio.config@1.0.so', 'android.hardware.radio.c_shim@1.0.so')
         .replace_needed('android.hardware.radio.config@1.1.so', 'android.hardware.radio.c_shim@1.1.so')
         .replace_needed('android.hardware.radio.config@1.2.so', 'android.hardware.radio.c_shim@1.2.so'),
+    'system/lib64/lib-imsvideocodec.so': blob_fixup()
+        .add_needed('libgui_shim.so'),
 }
 
 module = ExtractUtilsModule(
