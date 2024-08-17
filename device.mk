@@ -48,9 +48,7 @@ PRODUCT_PACKAGES += \
     android.hardware.audio@6.0-impl \
     android.hardware.audio.effect@6.0-impl \
     android.hardware.audio.service \
-    android.hardware.bluetooth.audio-impl \
     android.hardware.soundtrigger@2.1-impl \
-    audio.bluetooth.default \
     audio.primary.msmnile \
     audio.r_submix.default \
     audio.usb.default \
@@ -115,10 +113,8 @@ PRODUCT_COPY_FILES += \
 
 # Bluetooth
 PRODUCT_PACKAGES += \
-    android.hardware.bluetooth@1.0.vendor \
-    vendor.qti.hardware.bluetooth_audio@2.0.vendor \
-    vendor.qti.hardware.btconfigstore@1.0.vendor \
-    vendor.qti.hardware.btconfigstore@2.0.vendor
+    audio.bluetooth.default \
+    android.hardware.bluetooth.audio-impl
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.bluetooth_le.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth_le.xml \
@@ -134,30 +130,10 @@ PRODUCT_PACKAGES_DEBUG += \
     bootctl
 
 # Camera
-PRODUCT_PACKAGES += \
-    android.hardware.camera.common@1.0.vendor \
-    android.hardware.camera.device@3.5.vendor \
-    android.hardware.camera.provider@2.4.vendor \
-    vendor.qti.hardware.camera.postproc@1.0.vendor \
-    libcamera2ndk_vendor \
-    libdng_sdk.vendor \
-    libgui_vendor \
-    libstdc++_vendor
-
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.camera.flash-autofocus.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.flash-autofocus.xml \
     frameworks/native/data/etc/android.hardware.camera.front.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.front.xml \
     frameworks/native/data/etc/android.hardware.camera.full.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.full.xml
-
-# Charger (SEMC)
-PRODUCT_PACKAGES += \
-    vendor.semc.hardware.charger@1.0.vendor
-
-# Codec2
-PRODUCT_PACKAGES += \
-    android.hardware.media.c2@1.0.vendor \
-    libcodec2_hidl@1.0.vendor \
-    libcodec2_vndk.vendor
 
 # Configstore
 PRODUCT_PACKAGES += \
@@ -182,16 +158,7 @@ PRODUCT_PACKAGES += \
     libsdmutils \
     libtinyxml \
     libvulkan \
-    vendor.display.config@1.5 \
-    vendor.display.config@1.11.vendor \
-    vendor.display.config@2.0 \
-    vendor.display.config@2.0.vendor \
     vendor.qti.hardware.display.allocator-service \
-    vendor.qti.hardware.display.mapper@1.0.vendor \
-    vendor.qti.hardware.display.mapper@1.1.vendor \
-    vendor.qti.hardware.display.mapper@2.0.vendor \
-    vendor.qti.hardware.display.mapper@3.0.vendor \
-    vendor.qti.hardware.display.mapper@4.0.vendor \
     vendor.qti.hardware.memtrack-service \
 
 PRODUCT_COPY_FILES += \
@@ -203,40 +170,17 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.vulkan.deqp.level-2020-03-01.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.vulkan.deqp.level.xml \
     frameworks/native/data/etc/handheld_core_hardware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/handheld_core_hardware.xml
 
-# Display (SEMC)
-PRODUCT_PACKAGES += \
-    vendor.semc.hardware.display@2.2.vendor
-
 # DRM
 PRODUCT_PACKAGES += \
-    android.hardware.drm-service.clearkey \
-    android.hardware.drm@1.3.vendor
-
-# Gatekeeper
-PRODUCT_PACKAGES += \
-    android.hardware.gatekeeper@1.0.vendor
+    android.hardware.drm-service.clearkey
 
 # GPS
-PRODUCT_PACKAGES += \
-    android.hardware.gnss@1.0.vendor \
-    android.hardware.gnss.measurement_corrections@1.1.vendor \
-    android.hardware.gnss.visibility_control@1.0.vendor \
-    android.hardware.gnss@2.1.vendor
-
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.location.gps.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.location.gps.xml
 
 # Health
 PRODUCT_PACKAGES += \
-    android.hardware.health@2.1.vendor \
     android.hardware.health-service.qti
-
-# HIDL
-PRODUCT_PACKAGES += \
-    android.hidl.allocator@1.0.vendor \
-    android.hidl.base@1.0 \
-    android.hidl.base@1.0.vendor \
-    android.hidl.memory@1.0.vendor
 
 #  IPACM
 PRODUCT_PACKAGES += \
@@ -246,17 +190,13 @@ PRODUCT_PACKAGES += \
     liboffloadhal
 
 # Keymaster
-PRODUCT_PACKAGES += \
-    android.hardware.keymaster@4.1.vendor
-
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.device_id_attestation.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.device_id_attestation.xml \
     frameworks/native/data/etc/android.software.verified_boot.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.verified_boot.xml
 
 # Light
 PRODUCT_PACKAGES += \
-    android.hardware.lights-service.sony_sphinx \
-    android.hardware.light@2.0.vendor
+    android.hardware.lights-service.sony_sphinx
 
 # Media
 PRODUCT_PACKAGES += \
@@ -268,12 +208,8 @@ PRODUCT_PACKAGES += \
     libOmxQcelp13Enc \
     libOmxVdec \
     libOmxVenc \
-    libavservices_minijail \
-    libavservices_minijail.vendor \
-    libavservices_minijail_vendor \
     libc2dcolorconvert \
     libmm-omxcore \
-    libstagefright_softomx.vendor \
     libstagefrighthw
 
 PRODUCT_COPY_FILES += \
@@ -295,20 +231,9 @@ PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_video.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_video_le.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_video_le.xml
 
-# Net
-PRODUCT_PACKAGES += \
-    android.system.net.netd@1.1.vendor
-
-# Neural networks
-PRODUCT_PACKAGES += \
-    android.hardware.neuralnetworks@1.3.vendor
-
 # NFC
 PRODUCT_PACKAGES += \
     android.hardware.nfc-service.nxp \
-    android.hardware.nfc@1.2.vendor \
-    android.hardware.secure_element@1.1.vendor \
-    android.hardware.secure_element@1.2.vendor \
     com.android.nfc_extras \
     NfcNci \
     SecureElement \
@@ -336,30 +261,12 @@ PRODUCT_PACKAGES += \
     TelephonyResSphinx \
     WifiResSphinx
 
-# Perf
-PRODUCT_PACKAGES += \
-    vendor.qti.hardware.perf@1.0.vendor
-
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power-service-qti \
-    android.hardware.power@1.2.vendor \
-    vendor.qti.hardware.perf@2.2.vendor
-
-# QMI
-PRODUCT_PACKAGES += \
-    libjson \
-    libqti_vndfwk_detect \
-    libqti_vndfwk_detect.vendor \
-    libvndfwk_detect_jni.qti \
-    libvndfwk_detect_jni.qti.vendor
 
 # RIL
 PRODUCT_PACKAGES += \
-    android.hardware.radio@1.4.vendor \
-    android.hardware.radio@1.5.vendor \
-    android.hardware.radio.config@1.2.vendor \
-    android.hardware.radio.deprecated@1.0.vendor \
     extphonelib \
     extphonelib.xml \
     libprotobuf-cpp-full \
@@ -386,8 +293,6 @@ PRODUCT_PACKAGES += \
 # Sensors
 PRODUCT_PACKAGES += \
     android.hardware.sensors@2.0-service.multihal \
-    android.hardware.sensors@2.0-ScopedWakelock.vendor \
-    android.hardware.sensors@2.0.vendor \
     libsensorndkbridge
 
 PRODUCT_COPY_FILES += \
@@ -460,42 +365,10 @@ PRODUCT_PACKAGES += \
 # Vibrator
 $(call inherit-product, vendor/qcom/opensource/vibrator/vibrator-vendor-product.mk)
 
-# VNDK
-PRODUCT_PACKAGES += \
-    libsqlite.vendor \
-    libutilscallstack.vendor \
-    libssl.vendor \
-    libnetutils.vendor \
-    libprocessgroup \
-    libhidltransport \
-    libhidltransport.vendor \
-    libhwbinder \
-    libhwbinder.vendor
-
-PRODUCT_COPY_FILES += \
-    prebuilts/vndk/v29/arm/arch-arm-armv7-a-neon/shared/vndk-core/libprotobuf-cpp-full.so:$(TARGET_COPY_OUT_VENDOR)/lib/libprotobuf-cpp-full.so \
-    prebuilts/vndk/v29/arm/arch-arm-armv7-a-neon/shared/vndk-sp/libbinderthreadstate.so:$(TARGET_COPY_OUT_VENDOR)/lib/libbinderthreadstate.so \
-    prebuilts/vndk/v29/arm/arch-arm-armv7-a-neon/shared/vndk-sp/libhidlbase.so:$(TARGET_COPY_OUT_VENDOR)/lib/libhidlbase-v29.so \
-    prebuilts/vndk/v29/arm64/arch-arm-armv8-a/shared/vndk-sp/libcutils.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libcutils-v29.so \
-    prebuilts/vndk/v29/arm64/arch-arm-armv8-a/shared/vndk-sp/libcutils.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcutils-v29.so \
-    prebuilts/vndk/v29/arm64/arch-arm64-armv8-a/shared/vndk-core/libprotobuf-cpp-full.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libprotobuf-cpp-full.so \
-    prebuilts/vndk/v29/arm64/arch-arm64-armv8-a/shared/vndk-core/libprotobuf-cpp-lite.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libprotobuf-cpp-lite.so \
-    prebuilts/vndk/v29/arm64/arch-arm64-armv8-a/shared/vndk-sp/libbinderthreadstate.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbinderthreadstate.so \
-    prebuilts/vndk/v29/arm64/arch-arm64-armv8-a/shared/vndk-sp/libcutils.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libcutils-v29.so \
-    prebuilts/vndk/v29/arm64/arch-arm64-armv8-a/shared/vndk-sp/libcutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcutils-v29.so \
-    prebuilts/vndk/v32/arm64/arch-arm-armv8-a/shared/vndk-core/libbinder.so:$(TARGET_COPY_OUT_VENDOR)/lib/libbinder-v32.so \
-    prebuilts/vndk/v32/arm64/arch-arm-armv8-a/shared/vndk-sp/libutils.so:$(TARGET_COPY_OUT_VENDOR)/lib/libutils-v32.so \
-    prebuilts/vndk/v32/arm64/arch-arm64-armv8-a/shared/vndk-sp/libhidlbase.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libhidlbase-v32.so \
-    prebuilts/vndk/v32/arm64/arch-arm64-armv8-a/shared/vndk-sp/libhidlbase.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libhidlbase-v32.so \
-    prebuilts/vndk/v32/arm64/arch-arm64-armv8-a/shared/vndk-sp/libutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libutils-v32.so \
-    prebuilts/vndk/v33/arm64/arch-arm64-armv8-a/shared/vndk-sp/libutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libutils-v33.so
-
 # WiFi
 PRODUCT_PACKAGES += \
     android.hardware.wifi-service \
     libwpa_client \
-    vendor.qti.hardware.wifi.hostapd@1.2.vendor \
-    vendor.qti.hardware.wifi.supplicant@2.2.vendor \
     wpa_supplicant
 
 PRODUCT_COPY_FILES += \
