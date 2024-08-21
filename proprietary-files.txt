@@ -1822,9 +1822,6 @@ vendor/etc/init/mlog_qmi_service.rc
 vendor/bin/sct_service
 vendor/etc/init/sct_service.rc
 
-# USB
-vendor/etc/init/init.sony.usb.rc
-
 # VPP
 vendor/bin/vppservice
 vendor/lib/libpfter.so
