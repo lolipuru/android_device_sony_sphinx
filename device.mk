@@ -76,6 +76,10 @@ PRODUCT_PACKAGES_DEBUG += \
 PRODUCT_PACKAGES += \
 	disable_configstore
 
+# fastbootd
+PRODUCT_PACKAGES += \
+    fastbootd
+
 # IPACM
 PRODUCT_PACKAGES += \
     ipacm \
