@@ -303,6 +303,9 @@ PRODUCT_SOONG_NAMESPACES += \
 
 # Symlink
 PRODUCT_PACKAGES += \
+    vendor_bt_firmware_mountpoint \
+    vendor_dsp_mountpoint \
+    vendor_firmware_mnt_mountpoint \
     firmware_wlan_mac.bin_symlink \
     firmware_WCNSS_qcom_cfg.ini_symlink \
 	firmware_bdwlan.bin_symlink
