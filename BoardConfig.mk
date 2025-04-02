@@ -14,8 +14,6 @@
 #
 
 DEVICE_PATH := device/sony/sphinx
-BUILD_BROKEN_DUP_RULES := true
-BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 
 # A/B
 AB_OTA_UPDATER := true
