@@ -84,7 +84,10 @@ BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 BOARD_KERNEL_SEPARATED_DTBO := true
 BOARD_RAMDISK_USE_LZ4 := true
 TARGET_KERNEL_SOURCE := kernel/sony/sm8150
-TARGET_KERNEL_CONFIG := vendor/$(PRODUCT_DEVICE)_defconfig
+TARGET_KERNEL_CONFIG := \
+    vendor/sm8150-perf_defconfig \
+    vendor/kumano-plus.config \
+	vendor/$(PRODUCT_DEVICE).config
 
 BOARD_MKBOOTIMG_ARGS += \
 	--base $(BOARD_KERNEL_BASE) \
