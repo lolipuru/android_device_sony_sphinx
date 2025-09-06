@@ -238,6 +238,8 @@ PRODUCT_PACKAGES += \
     WifiResSphinx
 
 # Power
+$(call soong_config_set,qtipower,mode_ext_lib,//$(LOCAL_PATH):libpowermode-ext-sony)
+
 PRODUCT_PACKAGES += \
     android.hardware.power-service.lineage-libperfmgr \
     libqti-perfd-client
