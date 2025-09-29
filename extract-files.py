@@ -165,6 +165,10 @@ blob_fixups: blob_fixups_user_type = {
         'vendor/lib64/libgps.utils.so',
     ): blob_fixup()
         .add_needed('libprocessgroup.so'),
+    (
+        'vendor/etc/public.libraries.txt'
+    ): blob_fixup()
+        .regex_replace('libqti-perfd-client.so\n', ''),
 }
 
 module = ExtractUtilsModule(
