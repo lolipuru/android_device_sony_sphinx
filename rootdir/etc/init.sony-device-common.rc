@@ -14,7 +14,7 @@ on boot
     chmod 0600 /sys/devices/virtual/sec/tsp/module_id
     restorecon /sys/devices/virtual/sec/tsp/module_id
     chown system system /sys/devices/virtual/sec/tsp/cmd
-    chmod 0600 /sys/devices/virtual/sec/tsp/cmd
+    chmod 0660 /sys/devices/virtual/sec/tsp/cmd
     restorecon /sys/devices/virtual/sec/tsp/cmd
 
 # Touch
