@@ -96,4 +96,12 @@
             <instance>default</instance>
         </interface>
     </hal>
+    <hal format="hidl" optional="true">
+        <name>android.hardware.secure_element</name>
+        <version>1.0</version>
+        <interface>
+            <name>ISecureElement</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
 </compatibility-matrix>
