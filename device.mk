@@ -254,6 +254,9 @@ PRODUCT_PACKAGES += \
     android.hardware.power-service.lineage-libperfmgr \
     libqti-perfd-client
 
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/perf/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
+
 # RIL
 PRODUCT_PACKAGES += \
     extphonelib \
