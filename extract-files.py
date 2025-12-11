@@ -143,6 +143,10 @@ blob_fixups: blob_fixups_user_type = {
         .regex_replace('group vendor', 'group system'),
     'system/lib64/lib-imsvideocodec.so': blob_fixup()
         .add_needed('libgui_shim.so'),
+	(
+        'vendor/lib64/libdpps.so',
+    ): blob_fixup()
+        .replace_needed('libtinyxml2.so', 'libtinyxml2-v34.so'),
 }
 
 module = ExtractUtilsModule(
