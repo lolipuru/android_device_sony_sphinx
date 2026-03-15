@@ -1,0 +1,129 @@
+# Audio
+aaudio.hw_burst_min_usec=2000
+aaudio.mmap_exclusive_policy=2
+aaudio.mmap_policy=2
+audio.deep_buffer.media=true
+audio.offload.video=true
+persist.vendor.audio.fluence.voicecall=true
+persist.vendor.audio.fluence.voicerec=false
+persist.vendor.audio.fluence.speaker=true
+persist.vendor.audio.fluence.tmic.enabled=false
+persist.vendor.audio.ras.enabled=false
+persist.vendor.audio.latency_deep_buffer_speaker=29
+persist.vendor.audio.latency_deep_buffer_headset=29
+persist.vendor.audio.latency_deep_buffer_usb=-13
+persist.vendor.audio.latency_deep_buffer_a2dp=0
+persist.vendor.audio.latency_compress_offload_speaker=-20
+persist.vendor.audio.latency_compress_offload_headset=-20
+persist.vendor.audio.latency_compress_offload_usb=-48
+persist.vendor.audio.latency_compress_offload_a2dp=220
+persist.vendor.audio.voicecall.speaker.stereo=true
+persist.vendor.audio.speaker.prot.enable=true
+ro.vendor.audio.sdk.fluencetype=none
+ro.vendor.audio.sdk.ssr=false
+vendor.audio.adm.buffering.ms=2
+vendor.audio.dolby.ds2.enabled=false
+vendor.audio.dolby.ds2.hardbypass=false
+vendor.audio.enable.mirrorlink=false
+vendor.audio.flac.sw.decoder.24bit=true
+vendor.audio.hal.boot.timeout.ms=20000
+vendor.audio.hal.output.suspend.supported=true
+vendor.audio.hw.aac.encoder=false
+vendor.audio.offload.buffer.size.kb=32
+vendor.audio.offload.gapless.enabled=true
+vendor.audio.offload.multiaac.enable=true
+vendor.audio.offload.multiple.enabled=true
+vendor.audio.offload.passthrough=false
+vendor.audio.offload.track.enable=false
+vendor.audio.offload.pstimeout.secs=3
+vendor.audio.parser.ip.buffer.size=262144
+vendor.audio.safx.pbe.enabled=false
+vendor.audio.tunnel.encode=false
+vendor.audio.use.sw.alac.decoder=true
+vendor.audio.use.sw.ape.decoder=true
+vendor.audio_hal.in_period_size=144
+vendor.audio_hal.period_multiplier=3
+vendor.audio_hal.period_size=192
+vendor.voice.path.for.pcm.voip=true
+
+# Bluetooth
+persist.vendor.bt.aac_frm_ctl.enabled=true
+persist.vendor.bt.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac
+
+# Chipset
+ro.soc.manufacturer=Qualcomm
+ro.soc.model=SM8150
+
+# Crypto
+ro.crypto.volume.filenames_mode=aes-256-cts
+ro.crypto.allow_encrypt_override=true
+
+# Display
+ro.vendor.display.cabl=0
+vendor.display.comp_mask=0
+vendor.display.dataspace_saturation_matrix=1.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,1.0
+vendor.display.disable_scaler=0
+vendor.display.disable_inline_rotator=1
+vendor.display.disable_decimation=1
+vendor.display.disable_excl_rect=0
+vendor.display.disable_hw_recovery_dump=1
+vendor.display.enable_default_color_mode=1
+vendor.display.enable_null_display=0
+
+# FRP
+ro.frp.pst=/dev/block/bootdevice/by-name/
+
+# Gatekeeper
+vendor.gatekeeper.disable_spu=true
+
+# Graphics
+debug.egl.hw=0
+debug.mdpcomp.logs=0
+debug.sf.hw=0
+debug.sf.latch_unsignaled=1
+persist.sys.sf.color_saturation=1.0
+ro.gfx.driver.1=com.qualcomm.qti.gpudrivers.msmnile.api30
+ro.hardware.egl=adreno
+ro.hardware.vulkan=adreno
+ro.opengles.version=196610
+vendor.gralloc.disable_ubwc=
+
+# Keyguard
+keyguard.no_require_sim=true
+
+# Keystore
+ro.hardware.keystore_desede=true
+
+# IOP
+vendor.iop.enable_uxe=0
+
+# Media
+vendor.media.vpp.enable=true
+
+# NFC
+ro.camera.notify_nfc=1
+
+# Perf
+ro.vendor.extension_library=libqti-perfd-client.so
+
+# Radio
+persist.vendor.radio.apm_sim_not_pwdn=1
+persist.vendor.radio.sib16_support=1
+persist.vendor.radio.custom_ecc=1
+persist.vendor.radio.rat_on=combine
+persist.vendor.radio.wait_for_pbm=1
+persist.vendor.radio.oem_socket=true
+persist.vendor.radio.unicode_op_names=true
+persist.vendor.radio.do_not_use_oprt_db=true
+persist.vendor.radio.add_power_save=1
+persist.vendor.radio.vdp_on_ims_cap=1
+persist.vendor.radio.report_codec=1
+persist.vendor.radio.ims_call_transfer=true
+persist.vendor.radio.mt_sms_ack=19
+persist.vendor.radio.5g_mode_pref=1
+
+# Sensors
+persist.vendor.sensors.direct_channel=false
+
+# Shutdown
+sys.vendor.shutdown.waittime=500
