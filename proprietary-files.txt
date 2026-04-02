@@ -1616,12 +1616,14 @@ vendor/bin/sscrpcd
 vendor/etc/init/vendor.qti.hardware.sensorscalibrate@1.0-service.rc
 vendor/etc/permissions/vendor-qti-hardware-sensorscalibrate.xml
 vendor/etc/sensors/hals.conf
+vendor/lib/libhalsensor.adux1050.somc.so
 vendor/lib/libsensorslog.so
 vendor/lib/libsns_fastRPC_util.so
 vendor/lib/libsnsdiaglog.so
 vendor/lib/libssc.so
 vendor/lib/sensors.ssc.so
 vendor/lib64/hw/vendor.qti.hardware.sensorscalibrate@1.0-impl.so
+vendor/lib64/libhalsensor.adux1050.somc.so
 vendor/lib64/libsensorcal.so
 vendor/lib64/libsensorslog.so
 vendor/lib64/libsns_device_mode_stub.so
