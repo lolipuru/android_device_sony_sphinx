@@ -1394,10 +1394,12 @@ vendor/lib64/vendor.qti.power.pasrmanager@1.0.so
 
 # Peripheral manager
 vendor/bin/pm-proxy
-vendor/bin/pm-service
+# pm-service from 55.2.A.4.332
+vendor/bin/pm-service|233111a0c4f74bb4f702567ed59569c8469a8775
 vendor/lib/libperipheral_client.so
 vendor/lib/libspcom.so
-vendor/lib64/libperipheral_client.so
+# libperipheral_client.so from 55.2.A.4.332
+vendor/lib64/libperipheral_client.so|8cb65f4c93719767048dd7b1b845473fe6074ff7
 vendor/lib64/libspcom.so
 
 # QMI
