@@ -1228,19 +1228,19 @@ vendor/firmware/leia_pm4_470.fw
 vendor/etc/hbtp/loader.cfg
 vendor/etc/hbtp/qtc801s.bin
 
-# IDD
-vendor/bin/hw/vendor.semc.system.idd@1.0-service
-vendor/bin/iddd
-vendor/etc/idd.fstab
-vendor/etc/init/init.sony.idd.rc
-vendor/etc/init/vendor.semc.system.idd@1.0-service.rc
-vendor/etc/security/idd_config.pem
-vendor/etc/security/idd_report.pem
-vendor/lib/libidd.so
-vendor/lib/vendor.semc.system.idd@1.0.so
-vendor/lib64/libidd.so
-vendor/lib64/libprotobuf-c-idd.so
-vendor/lib64/vendor.semc.system.idd@1.0.so
+# IDD - from 55.2.A.4.332
+vendor/bin/hw/vendor.semc.system.idd@1.0-service|2b447779c96b76564eb7dd80e880aae6e12781f4
+vendor/bin/iddd|701504cd62afb0e5fcef08c3c5201425efa185eb
+vendor/etc/idd.fstab|3b0f0b35e10b3697a54f8582999faca2e362bbb9
+vendor/etc/init/init.sony.idd.rc|2c04a6cab2189ce1deeac00f98bccee1ae9e24af
+vendor/etc/init/vendor.semc.system.idd@1.0-service.rc|5c3963b90e6d3af88253b4717665f59f888c7e31
+vendor/etc/security/idd_config.pem|74cca1b8ecda88011840b0fe77e5e8fe6b9d7a4c
+vendor/etc/security/idd_report.pem|b680af3cf274bd858370be8933ac20e7f4a96d5d
+vendor/lib/libidd.so|7cfbf6dc3a045c6c9ece7283e93801c2a968efff
+vendor/lib/vendor.semc.system.idd@1.0.so|aa4f05b4e98b5ecede0ee36946b44b169fd287f4
+vendor/lib64/libidd.so|0f6d385b5403aa4d2ab4a505798d99b95fcabc56
+vendor/lib64/libprotobuf-c-idd.so|ef129097e40dc498982a09560398157591eb5818
+vendor/lib64/vendor.semc.system.idd@1.0.so|6a20d04344c38ae4f0cfd399e63506f0a24c24c1
 
 # Illumination
 vendor/bin/hw/illumination_service
