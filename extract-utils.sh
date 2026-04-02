@@ -186,6 +186,10 @@ function blob_fixup() {
     vendor/lib64/com.qualcomm.qti.ant@1.0.so)
         patchelf --replace-needed "libhidlbase.so" "libhidlbase-v32.so" "${2}"
     ;;
+    vendor/bin/loc_launcher|\
+    vendor/lib64/libgps.utils.so)
+        patchelf --add-needed "libprocessgroup.so" "${2}"
+    ;;
     esac
 }
 
