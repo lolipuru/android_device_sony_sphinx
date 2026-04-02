@@ -1343,9 +1343,15 @@ vendor/lib64/libmulawdec.so
 # Media
 system/lib64/libmmosal.so
 system/lib64/libmmparser_lite.so
+vendor/bin/hw/vendor.qti.media.c2@1.0-service|711fc86b6a7768ba844155b61debdda4e291767e
+vendor/etc/init/vendor.qti.media.c2@1.0-service.rc|11209316ba8aae64b689217bc13b0804f6620678
 vendor/etc/media_profiles_vendor.xml
 vendor/etc/media_profiles.xml
+vendor/etc/seccomp_policy/codec2.vendor.base.policy|05b0779b5da2ea640984d46a46a796edeaab5fab
+vendor/etc/seccomp_policy/codec2.vendor.ext.policy|6a9a9eb3261048f02805261568097410e1a23b2d
+vendor/lib/libqcodec2.so|25be46d8bc16ba2b88310dea1ea6e4ab25cbe1fa
 vendor/lib/libstagefright_hdcp.so
+vendor/lib64/libqcodec2.so|423e01a8a722c0712b31a26d6e66f6e21a287666
 vendor/lib64/libstagefright_hdcp.so
 vendor/odm/etc/media_profiles_V1_0.xml:odm/etc/media_profiles_V1_0.xml
 
