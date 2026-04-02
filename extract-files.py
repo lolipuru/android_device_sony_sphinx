@@ -193,6 +193,9 @@ blob_fixups: blob_fixups_user_type = {
         'vendor/etc/public.libraries.txt'
     ): blob_fixup()
         .regex_replace('libqti-perfd-client.so\n', ''),
+    'vendor/etc/init/vendor.semc.hardware.charger@1.0-service.rc': blob_fixup()
+        .regex_replace('user vendor', 'user system')
+        .regex_replace('group vendor', 'group system'),
 }
 
 module = ExtractUtilsModule(
