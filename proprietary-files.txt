@@ -1735,7 +1735,10 @@ vendor/bin/subsystem_ramdump
 vendor/bin/tad
 
 # TA QMI
+vendor/bin/ta2bin
 vendor/bin/ta_qmi_service
+vendor/bin/ta_5g_qmi_service
+vendor/etc/init/init.ta5gqmi.rc
 vendor/lib64/libta.so
 vendor/lib/libta.so
 
