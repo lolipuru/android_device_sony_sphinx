@@ -1451,12 +1451,15 @@ vendor/bin/hw/qcrild
 vendor/bin/hw/vendor.qti.hardware.qteeconnector@1.0-service
 vendor/bin/ks
 vendor/bin/netmgrd
+vendor/bin/mdm_helper
+vendor/bin/mdm_helper_proxy
 vendor/bin/pd-mapper
 vendor/bin/port-bridge
 vendor/bin/qti
 vendor/bin/rmt_storage
 vendor/bin/ssgtzd
 vendor/bin/tftp_server
+vendor/bin/init.mdm.sh
 vendor/etc/data/dsi_config.xml;FIX_XML
 vendor/etc/data/netmgr_config.xml;FIX_XML
 vendor/etc/init/qcrild.rc
@@ -1473,6 +1476,7 @@ vendor/lib64/hw/vendor.qti.hardware.qteeconnector@1.0-impl.so
 vendor/lib64/libconfigdb.so
 vendor/lib64/liblqe.so
 vendor/lib64/libmdmdetect.so
+vendor/lib64/libmdmimgload.so
 vendor/lib64/libminkdescriptor.so
 vendor/lib64/libnetmgr_common.so
 vendor/lib64/libnetmgr_nr_fusion.so
