@@ -46,7 +46,18 @@ PRODUCT_PACKAGES += \
 # Rootdir
 PRODUCT_PACKAGES += \
     fstab.qcom \
-    fstab.qcom.ramdisk
+    fstab.qcom.ramdisk \
+    init.class_main.sh \
+    init.qcom.early_boot.sh \
+    init.qcom.post_boot.sh \
+    init.qcom.sensors.sh \
+    init.qcom.sh \
+    init.recovery.qcom.rc \
+    init.target.rc \
+    init.qcom.rc \
+    init.sony-platform.rc \
+    init.sony.sensors.rc \
+    ueventd.qcom.rc
 
 # Update engine
 PRODUCT_PACKAGES += \
