@@ -150,6 +150,10 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.camera.front.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.front.xml \
     frameworks/native/data/etc/android.hardware.camera.full.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.full.xml
 
+# Charger (SEMC)
+PRODUCT_PACKAGES += \
+    vendor.semc.hardware.charger@1.0.vendor
+
 # Codec2
 PRODUCT_PACKAGES += \
     android.hardware.media.c2@1.0.vendor \
@@ -200,6 +204,10 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.opengles.deqp.level-2020-03-01.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.opengles.deqp.level.xml \
     frameworks/native/data/etc/android.software.vulkan.deqp.level-2020-03-01.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.vulkan.deqp.level.xml \
     frameworks/native/data/etc/handheld_core_hardware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/handheld_core_hardware.xml
+
+# Display (SEMC)
+PRODUCT_PACKAGES += \
+    vendor.semc.hardware.display@2.2.vendor
 
 # DRM
 PRODUCT_PACKAGES += \
@@ -381,7 +389,8 @@ PRODUCT_COPY_FILES += \
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
-    $(LOCAL_PATH)
+    $(LOCAL_PATH) \
+    hardware/sony
 
 # Symlink
 PRODUCT_PACKAGES += \

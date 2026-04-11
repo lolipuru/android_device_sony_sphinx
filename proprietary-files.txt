@@ -868,7 +868,6 @@ vendor/bin/chg-pwr-service
 vendor/bin/hw/vendor.semc.hardware.charger@1.0-service
 vendor/etc/chg-pwr-service.cfg
 vendor/etc/init/vendor.semc.hardware.charger@1.0-service.rc
-vendor/lib64/vendor.semc.hardware.light@1.0.so
 
 # CNE
 system/framework/com.quicinc.cne.api-V1.0-java.jar
