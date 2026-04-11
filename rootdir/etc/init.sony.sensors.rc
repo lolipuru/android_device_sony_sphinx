@@ -8,13 +8,6 @@ on early-init
         adux1050
 on init
     # slave address: 0x2c
-    ONLY_IN_VARIANT(user,
-    chmod 220 /sys/bus/i2c/devices/3-002c/adux1050_offset_dac_write
-    chmod 660 /sys/bus/i2c/devices/3-002c/adux1050_enable
-    )
-    chown system system /sys/bus/i2c/devices/3-002c/adux1050_offset_dac_write
-    chown system system /sys/bus/i2c/devices/3-002c/adux1050_enable
-    ONLY_IN_VARIANT(userdebug,
     chmod 222 /sys/bus/i2c/devices/3-002c/adux1050_offset_dac_write
     chmod 666 /sys/bus/i2c/devices/3-002c/adux1050_enable
     chmod 222 /sys/bus/i2c/devices/3-002c/adux1050_force_calib
@@ -27,14 +20,8 @@ on init
     chown system system /sys/bus/i2c/devices/3-002c/adux1050_mask_cdc_interrupt
     chown system system /sys/bus/i2c/devices/3-002c/adux1050_reg_read
     chown system system /sys/bus/i2c/devices/3-002c/adux1050_reg_write
-    )
+
     # slave address: 0x2d
-    ONLY_IN_VARIANT(user,
-    chmod 220 /sys/bus/i2c/devices/3-002d/adux1050_offset_dac_write
-    chmod 660 /sys/bus/i2c/devices/3-002d/adux1050_enable)
-    chown system system /sys/bus/i2c/devices/3-002d/adux1050_offset_dac_write
-    chown system system /sys/bus/i2c/devices/3-002d/adux1050_enable
-    ONLY_IN_VARIANT(userdebug,
     chmod 222 /sys/bus/i2c/devices/3-002d/adux1050_offset_dac_write
     chmod 666 /sys/bus/i2c/devices/3-002d/adux1050_enable
     chmod 222 /sys/bus/i2c/devices/3-002d/adux1050_force_calib
@@ -47,14 +34,8 @@ on init
     chown system system /sys/bus/i2c/devices/3-002d/adux1050_mask_cdc_interrupt
     chown system system /sys/bus/i2c/devices/3-002d/adux1050_reg_read
     chown system system /sys/bus/i2c/devices/3-002d/adux1050_reg_write
-    )
+
     # slave address: 0x2e
-    ONLY_IN_VARIANT(user,
-    chmod 220 /sys/bus/i2c/devices/3-002e/adux1050_offset_dac_write
-    chmod 660 /sys/bus/i2c/devices/3-002e/adux1050_enable)
-    chown system system /sys/bus/i2c/devices/3-002e/adux1050_offset_dac_write
-    chown system system /sys/bus/i2c/devices/3-002e/adux1050_enable
-    ONLY_IN_VARIANT(userdebug,
     chmod 222 /sys/bus/i2c/devices/3-002e/adux1050_offset_dac_write
     chmod 666 /sys/bus/i2c/devices/3-002e/adux1050_enable
     chmod 222 /sys/bus/i2c/devices/3-002e/adux1050_force_calib
@@ -67,4 +48,4 @@ on init
     chown system system /sys/bus/i2c/devices/3-002e/adux1050_mask_cdc_interrupt
     chown system system /sys/bus/i2c/devices/3-002e/adux1050_reg_read
     chown system system /sys/bus/i2c/devices/3-002e/adux1050_reg_write
-    )
+
