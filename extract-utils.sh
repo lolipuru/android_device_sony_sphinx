@@ -115,7 +115,6 @@ function blob_fixup() {
     vendor/lib/vendor.somc.hardware.camera.cacao@3.1.so|\
     vendor/lib/vendor.somc.hardware.camera.cacao@3.2.so|\
     vendor/lib/vendor.somc.hardware.camera.device@1.0.so|\
-    vendor/lib/vendor.somc.hardware.camera.provider@1.0.so|\
     vendor/bin/hw/vendor.qti.hardware.iop@2.0-service|\
     vendor/lib/vendor.somc.hardware.miscta@1.0.so|\
     vendor/lib/vendor.somc.hardware.security.secd@1.0.so|\

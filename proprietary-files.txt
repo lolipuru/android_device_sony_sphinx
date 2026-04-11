@@ -777,7 +777,7 @@ vendor/lib/vendor.somc.camera.device@3.2-impl.so
 vendor/lib/vendor.somc.camera.device@3.3-impl.so
 vendor/lib/vendor.somc.camera.device@3.4-impl.so
 vendor/lib/vendor.somc.hardware.camera.device@1.0.so
-vendor/lib/vendor.somc.hardware.camera.provider@1.0.so
+vendor/lib/vendor.somc.hardware.camera.provider@1.0.so|dcc00e4dd9d6065d53cc64e627a67e4d840b6340
 vendor/lib64/camera/com.qti.eeprom.truly_cmb433.so
 vendor/lib64/camera/components/com.qti.camx.chiiqutils.so
 vendor/lib64/camera/components/com.qti.eisv2.so
