@@ -190,10 +190,6 @@ function blob_fixup() {
     vendor/lib64/libgps.utils.so)
         patchelf --add-needed "libprocessgroup.so" "${2}"
     ;;
-    system/lib/libdpmframework.so|\
-    system/lib64/libdpmframework.so)
-        "${PATCHELF}" --replace-needed "libhidltransport.so" "libcutils-v29.so" "${2}"
-    ;;
     esac
 }
 

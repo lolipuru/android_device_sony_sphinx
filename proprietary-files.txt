@@ -1030,13 +1030,13 @@ system/lib/com.qualcomm.qti.dpm.api@1.0.so
 system/lib/libdiag_system.so
 system/lib/libdpmctmgr.so
 system/lib/libdpmfdmgr.so
-system/lib/libdpmframework.so
+system/lib/libdpmframework.so|168e2ec57d888575512f3d0f9b78eaf08b607158
 system/lib/libdpmtcm.so
 system/lib64/com.qualcomm.qti.dpm.api@1.0.so
 system/lib64/libdiag_system.so
 system/lib64/libdpmctmgr.so
 system/lib64/libdpmfdmgr.so
-system/lib64/libdpmframework.so
+system/lib64/libdpmframework.so|67ebd736333ae7158632735e3db06a4f9664f6a6
 system/lib64/libdpmtcm.so
 system/priv-app/dpmserviceapp/dpmserviceapp.apk
 vendor/bin/dpmQmiMgr
