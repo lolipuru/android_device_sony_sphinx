@@ -71,7 +71,7 @@ vendor.display.enable_default_color_mode=1
 vendor.display.enable_null_display=0
 
 # FRP
-ro.frp.pst=/dev/block/bootdevice/by-name/
+ro.frp.pst=/dev/block/bootdevice/by-name/frp
 
 # Gatekeeper
 vendor.gatekeeper.disable_spu=true
@@ -86,7 +86,7 @@ ro.gfx.driver.1=com.qualcomm.qti.gpudrivers.msmnile.api30
 ro.hardware.egl=adreno
 ro.hardware.vulkan=adreno
 ro.opengles.version=196610
-vendor.gralloc.disable_ubwc=
+vendor.gralloc.disable_ubwc=0
 
 # Keyguard
 keyguard.no_require_sim=true
@@ -102,6 +102,10 @@ vendor.media.vpp.enable=true
 
 # NFC
 ro.camera.notify_nfc=1
+
+# PASR
+vendor.power.pasr.enabled=true
+vendor.pasr.activemode.enabled=true
 
 # Perf
 ro.vendor.extension_library=libqti-perfd-client.so
@@ -128,3 +132,19 @@ persist.vendor.sensors.direct_channel=false
 
 # Shutdown
 sys.vendor.shutdown.waittime=500
+
+# USB
+vendor.usb.diag.func.name=diag
+vendor.usb.dpl.inst.name=dpl
+vendor.usb.qdss.inst.name=qdss
+vendor.usb.rmnet.func.name=gsi
+vendor.usb.rmnet.inst.name=rmnet
+vendor.usb.rndis.func.name=gsi
+vendor.usb.use_ffs_mtp=0
+vendor.usb.use_gadget_hal=0
+
+# Wifi
+wifi.aware.interface=wifi-aware0
+
+# Zygote
+zygote.critical_window.minute=10
