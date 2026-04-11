@@ -368,6 +368,7 @@ PRODUCT_PACKAGES += \
     init.recovery.qcom.rc \
     init.target.rc \
     init.qcom.rc \
+    init.sony-device-common.rc \
     init.sony-platform.rc \
     init.sony.sensors.rc \
     ueventd.qcom.rc

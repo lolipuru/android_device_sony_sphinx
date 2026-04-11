@@ -1,0 +1,21 @@
+# Copyright (c) 2018 Sony Mobile Communications Inc.
+#
+# product common configuration
+#
+
+on early-init
+    exec u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules sec_touchscreen
+
+on boot
+    write /sys/devices/virtual/sec/tsp/after_work 1
+
+    chown system system /sys/devices/virtual/sec/tsp/module_id
+    chmod 0600 /sys/devices/virtual/sec/tsp/module_id
+    restorecon /sys/devices/virtual/sec/tsp/module_id
+
+# Touch
+on property:dev.bootcomplete=1 && property:vendor.backlight_on=1
+    write /sys/devices/virtual/sec/tsp/cmd "touch_enable_irq,1"
+
+on property:dev.bootcomplete=1 && property:vendor.backlight_on=0
+    write /sys/devices/virtual/sec/tsp/cmd "touch_enable_irq,0"
