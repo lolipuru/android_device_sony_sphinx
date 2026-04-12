@@ -1861,8 +1861,10 @@ vendor/lib64/vendor.somc.hardware.swiqi@1.0-impl.so
 vendor/lib64/vendor.somc.hardware.swiqi@1.0.so
 
 # WLAN
+vendor/bin/cnss-daemon
 vendor/etc/wifi/bdwlan.bin
 vendor/etc/wifi/icm.conf
 vendor/etc/wifi/p2p_supplicant_overlay.conf
 vendor/etc/wifi/WCNSS_qcom_cfg.ini
 vendor/etc/wifi/wpa_supplicant_overlay.conf
+vendor/etc/wifi/wifi_txpower.conf
