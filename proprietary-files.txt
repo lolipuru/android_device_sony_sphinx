@@ -1452,6 +1452,7 @@ vendor/lib64/libqrtr.so
 
 # Qteeconnector
 system/etc/permissions/com.qualcomm.location.xml
+vendor/app/IWlanService/IWlanService.apk|c95872686c35bc11ff67fbbd2ef257310fb2f2f9
 vendor/bin/adpl
 vendor/bin/hw/qcrild
 vendor/bin/hw/vendor.qti.hardware.qteeconnector@1.0-service
@@ -1531,7 +1532,7 @@ system/etc/permissions/qti_permissions.xml
 system/etc/permissions/telephonyservice.xml
 system/etc/sysconfig/qti_whitelist.xml
 system/framework/embmslibrary.jar
-system/framework/qcrilhook.jar
+system/framework/qcrilhook.jar|417afc171e0eaffc884d1063485ff1906b546556
 system/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
 vendor/lib/libril-qcril-hook-oem.so
 vendor/lib64/libril-qcril-hook-oem.so
@@ -1541,11 +1542,11 @@ system/app/uceShimService/uceShimService.apk
 system/etc/permissions/com.qualcomm.qti.imscmservice-V2.0-java.xml
 system/etc/permissions/com.qualcomm.qti.imscmservice-V2.1-java.xml
 system/etc/permissions/com.qualcomm.qti.imscmservice.xml
-system/framework/com.qualcomm.qti.imscmservice-V2.0-java.jar
-system/framework/com.qualcomm.qti.imscmservice-V2.1-java.jar
-system/framework/com.qualcomm.qti.uceservice-V2.0-java.jar
-system/framework/vendor.qti.ims.callinfo-V1.0-java.jar
-system/framework/vendor.qti.ims.rcsconfig-V1.0-java.jar
+system/framework/com.qualcomm.qti.imscmservice-V2.0-java.jar|bc9bce9bcc7250bfba907db6a16b74a92bcb8e38
+system/framework/com.qualcomm.qti.imscmservice-V2.1-java.jar|13df5f82893912b9c040fa72ff2ca97ebc6023b6
+system/framework/com.qualcomm.qti.uceservice-V2.0-java.jar|e373bf8dddb0a7b79e36653c22637666cef296be
+system/framework/vendor.qti.ims.callinfo-V1.0-java.jar|3993d8d98969d0eaa7b5676128e85718588677d0
+system/framework/vendor.qti.ims.rcsconfig-V1.0-java.jar|abbfa2c4003a0b6e4906225c623c7d001ed6258a
 system/lib64/com.qualcomm.qti.imscmservice@1.0.so
 system/lib64/com.qualcomm.qti.imscmservice@2.0.so
 system/lib64/com.qualcomm.qti.imscmservice@2.1.so
