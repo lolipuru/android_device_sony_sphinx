@@ -139,15 +139,31 @@ vendor/lib64/soundfx/libqcreverb.so
 vendor/lib64/soundfx/libqcvirt.so
 vendor/lib64/soundfx/libshoebox.so
 
-# Bluetooth
-vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti
-vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc
-vendor/lib/hw/android.hardware.bluetooth@1.0-impl-qti.so
-vendor/lib/libbt-hidlclient.so
-vendor/lib/libbtnv.so
-vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so
-vendor/lib64/libbt-hidlclient.so
-vendor/lib64/libbtnv.so
+# Bluetooth - from 55.2.A.4.332
+vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti|02c8d8304cf5c88ae57122cfcc421c1130ad00c9
+vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc|f4ee3b2da2b08647447869ade86ec63f7340accc
+vendor/lib/btaudio_offload_if.so|be9b81e4f5a6ff22ea2d9a456a6eb1640edae196
+vendor/lib/hw/android.hardware.bluetooth@1.0-impl-qti.so|689211c3ec5253a68c22bf2575af0110af0aabe6
+vendor/lib/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so|d0ec5fee3a88bb63673065814c9df19ae09337c7
+vendor/lib/hw/vendor.qti.hardware.bluetooth_sar@1.1-impl.so|52b22a6468b1d9cceb39749d6044814fe09133f2
+vendor/lib/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so|f9642a7e9f446cb687388ae580d3602df69e7c64
+vendor/lib/hw/vendor.qti.hardware.btconfigstore@2.0-impl.so|172387c30d2af23d9181bac4935cb4244d085297
+vendor/lib/libbluetooth_audio_session_qti.so|53ad353e7c8799d5b7a201d05ec14582b091c504
+vendor/lib/libbt-hidlclient.so|5e19859f6bb08ecb2663085b2d8ac1700f6000be
+vendor/lib/libbtnv.so|508d76232fe64753b0f79009b941f7a7a60393df
+vendor/lib/vendor.qti.hardware.bluetooth_sar@1.0.so|95f55ed7b4b6e1512dc4eb1e5f31435ab2f1842e
+vendor/lib/vendor.qti.hardware.bluetooth_sar@1.1.so|4d05c888a0954ad1de0a50c164efcf52265d1380
+vendor/lib64/btaudio_offload_if.so|9db5031b09bebb4dc04e508c710d0cce0b4214da
+vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so|ee6c156bbedbbe3880d5f6f6336387323f234436
+vendor/lib64/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so|fa0c93509a7573c17268eb2d6754648eebdf34c6
+vendor/lib64/hw/vendor.qti.hardware.bluetooth_sar@1.1-impl.so|8862118bd1a0f2f248428649caaafea8fc680b17
+vendor/lib64/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so|019646b293636a6e5fa8c7190fe5f5fe30de7ab9
+vendor/lib64/hw/vendor.qti.hardware.btconfigstore@2.0-impl.so|d1af7c22e3e99bcee7e88e6dc96980dd682c9326
+vendor/lib64/libbluetooth_audio_session_qti.so|16c753503a5b042aed0da5334018334559e2260e
+vendor/lib64/libbt-hidlclient.so|f7b4068920dd44198b03c8b36a556273bc5b4c88
+vendor/lib64/libbtnv.so|26e74b9a8561b803722b729023f02a0a3c968a24
+vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so|e105d3aee3b489ab4356dfe742f2411021005586
+vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so|4afd2b36dad91ca89836ce27ce26b49bacbd2376
 
 # Cacaoserver
 vendor/lib/libcacao_common.so
