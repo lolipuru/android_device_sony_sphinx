@@ -140,7 +140,6 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.mapper@4.0-impl-qti-display \
     gralloc.qcom \
     hwcomposer.qcom \
-    memtrack.msmnile \
     libdisplayconfig.qti \
     libqdMetaData \
     libqdMetaData.system \
