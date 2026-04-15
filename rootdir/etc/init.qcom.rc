@@ -1112,8 +1112,6 @@ on property:vendor.opengles.version=*
 on property:vendor.gpu.available_frequencies=*
     setprop ro.vendor.gpu.available_frequencies ${vendor.gpu.available_frequencies}
 
-on property:init.svc.vendor.qcrild=stopped
-    stop vendor.radio-config-1-1-wrapper
 
 service vendor.audio-hal /vendor/bin/hw/android.hardware.audio.service
     override

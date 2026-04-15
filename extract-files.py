@@ -61,11 +61,6 @@ lib_fixups: lib_fixups_user_type = {
         'vendor.qti.ims.rcsconfig@1.1',
         'vendor.qti.imsrtpservice@3.0',
     ): lib_fixup_vendor_suffix,
-    (
-        'android.hardware.radio.c_shim@1.0',
-        'android.hardware.radio.c_shim@1.1',
-        'android.hardware.radio.c_shim@1.2',
-    ): lib_fixup_remove,
 }
 
 blob_fixups: blob_fixups_user_type = {
@@ -147,10 +142,6 @@ blob_fixups: blob_fixups_user_type = {
     'vendor/etc/init/vendor.semc.hardware.charger@1.0-service.rc': blob_fixup()
         .regex_replace('user vendor', 'user system')
         .regex_replace('group vendor', 'group system'),
-    'vendor/lib64/libril-qc-hal-qmi.so': blob_fixup()
-        .replace_needed('android.hardware.radio.config@1.0.so', 'android.hardware.radio.c_shim@1.0.so')
-        .replace_needed('android.hardware.radio.config@1.1.so', 'android.hardware.radio.c_shim@1.1.so')
-        .replace_needed('android.hardware.radio.config@1.2.so', 'android.hardware.radio.c_shim@1.2.so'),
     'system/lib64/lib-imsvideocodec.so': blob_fixup()
         .add_needed('libgui_shim.so'),
 }

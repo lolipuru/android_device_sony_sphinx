@@ -41,7 +41,7 @@
         <fqname>@1.2::IRadio/slot1</fqname>
     </hal>
     <hal format="hidl">
-        <name>lineage.hardware.radio.config</name>
+        <name>android.hardware.radio.config</name>
         <transport>hwbinder</transport>
         <fqname>@1.0::IRadioConfig/default</fqname>
     </hal>

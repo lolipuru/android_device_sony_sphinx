@@ -187,10 +187,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.lights-service.sony_sphinx
 
-# Lineage interfaces
-PRODUCT_PACKAGES += \
-    framework_compatibility_matrix.lineage.xml
-
 # Media
 PRODUCT_PACKAGES += \
     libc2dcolorconvert \
@@ -255,13 +251,6 @@ PRODUCT_PACKAGES += \
     libprotobuf-cpp-full \
     librmnetctl \
     libxml2
-
-# RIL (Shim)
-PRODUCT_PACKAGES += \
-    android.hardware.radio.c_shim@1.0 \
-    android.hardware.radio.c_shim@1.1 \
-    android.hardware.radio.c_shim@1.2 \
-    android.hardware.radio.config@1.1-service.wrapper
 
 # Rootdir
 PRODUCT_PACKAGES += \
