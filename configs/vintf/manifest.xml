@@ -38,12 +38,7 @@
         <name>android.hardware.radio</name>
         <transport>hwbinder</transport>
         <fqname>@1.2::ISap/slot1</fqname>
-        <fqname>@1.2::IRadio/slot1</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>android.hardware.radio.config</name>
-        <transport>hwbinder</transport>
-        <fqname>@1.0::IRadioConfig/default</fqname>
+        <fqname>@1.5::IRadio/slot1</fqname>
     </hal>
     <hal format="aidl">
         <name>android.hardware.radio.data</name>
@@ -68,6 +63,11 @@
     <hal format="aidl">
         <name>android.hardware.radio.voice</name>
         <fqname>IRadioVoice/slot1</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>android.hardware.radio.config</name>
+        <transport>hwbinder</transport>
+        <fqname>@1.1::IRadioConfig/default</fqname>
     </hal>
     <hal format="hidl">
         <name>android.hardware.renderscript</name>
@@ -152,7 +152,7 @@
     <hal format="hidl">
         <name>vendor.qti.hardware.data.connection</name>
         <transport>hwbinder</transport>
-        <fqname>@1.0::IDataConnection/slot1</fqname>
+        <fqname>@1.1::IDataConnection/slot1</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.qti.hardware.data.iwlan</name>
@@ -193,7 +193,7 @@
     <hal format="hidl">
         <name>vendor.qti.hardware.radio.ims</name>
         <transport>hwbinder</transport>
-        <fqname>@1.5::IImsRadio/imsradio0</fqname>
+        <fqname>@1.6::IImsRadio/imsradio0</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.qti.hardware.radio.lpa</name>
@@ -209,12 +209,12 @@
         <name>vendor.qti.hardware.radio.qtiradio</name>
         <transport>hwbinder</transport>
         <fqname>@1.0::IQtiRadio/slot1</fqname>
-        <fqname>@2.1::IQtiRadio/slot1</fqname>
+        <fqname>@2.4::IQtiRadio/slot1</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.qti.hardware.radio.uim</name>
         <transport>hwbinder</transport>
-        <fqname>@1.1::IUim/Uim0</fqname>
+        <fqname>@1.2::IUim/Uim0</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.qti.hardware.radio.uim_remote_client</name>
@@ -334,7 +334,6 @@
     <hal format="hidl">
         <name>android.hardware.secure_element</name>
         <transport>hwbinder</transport>
-        <fqname>@1.0::ISecureElement/eSE1</fqname>
-        <fqname>@1.0::ISecureElement/SIM1</fqname>
+        <fqname>@1.2::ISecureElement/SIM1</fqname>
     </hal>
 </manifest>
