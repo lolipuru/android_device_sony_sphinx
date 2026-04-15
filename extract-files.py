@@ -127,7 +127,6 @@ blob_fixups: blob_fixups_user_type = {
     (
         'vendor/bin/thermal-engine',
         'vendor/bin/keyprovd',
-        'vendor/bin/wvkbd',
     ): blob_fixup()
         .add_needed('libhidlbase-v32.so'),
     (

@@ -1837,22 +1837,23 @@ vendor/lib64/libthermalclient.so
 vendor/lib64/vendor.semc.hardware.thermal@1.0.so
 
 # Widevine DRM
-vendor/bin/hw/android.hardware.drm@1.1-service.widevine
-vendor/bin/wvkbd
-vendor/etc/init/android.hardware.drm@1.1-service.widevine.rc
-vendor/lib/libhdcprx_module.so
-vendor/lib/libhdcptx_module.so
-vendor/lib/liboemcrypto.so
-vendor/lib/libwvhidl.so
-vendor/lib/libwvtee.so
-vendor/lib/mediadrm/libwvdrmengine.so
-vendor/lib64/libhdcprx_module.so
-vendor/lib64/libhdcpsrm.so
-vendor/lib64/libhdcptx_module.so
-vendor/lib64/liboemcrypto.so
-vendor/lib64/libwvhidl.so
-vendor/lib64/libwvtee.so
-vendor/lib64/mediadrm/libwvdrmengine.so
+vendor/bin/hw/android.hardware.drm@1.3-service.widevine|eda493b548475d062bf5667263ada25fc0cb3bbb
+vendor/bin/wvkbd|9ffab3ee50ecb2fa5a0cae09737641996feab2a1
+vendor/etc/init/android.hardware.drm@1.3-service.widevine.rc|af7080280e559c86b359b26a0ee8d7859fe0e000
+vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.3-service.widevine.xml|ebebcf8f367641480cf7d512fc06e6ab777527be
+vendor/lib/libhdcprx_module.so|4319951f7960bfde01ca798d2920d4e1d26007c3
+vendor/lib/libhdcptx_module.so|0714750852033626c87958f9359279cca09d1fd9
+vendor/lib/liboemcrypto.so|f1052ec42f98e8370c6d14cdf2423448e9dc1c9a
+vendor/lib/libwvhidl.so|fb20c4ea47be7eae72879e965addf3059200ff35
+vendor/lib/libwvtee.so|9308740b8d70110bc479e5a97f750516053e8b8f
+vendor/lib/mediadrm/libwvdrmengine.so|7b9373fe5a58df9f11aeaecf46c38fc6bdbc1ecf
+vendor/lib64/libhdcprx_module.so|08b23fafc219d7d2a7e78cbd4513c163ae490a0a
+vendor/lib64/libhdcpsrm.so|bc3384a9f02a2a236a7d6316e6101a5ac4a1a039
+vendor/lib64/libhdcptx_module.so|6e0da54d4c56f8694663a83204df0ab13fcef251
+vendor/lib64/liboemcrypto.so|14d478adaa624123b46fc545885131d32ee119f4
+vendor/lib64/libwvhidl.so|ecbeb090fe6e640ff47fff492c2ad7dcd68deee3
+vendor/lib64/libwvtee.so|dc6b86256251b524a79e39add4cca22f52d429bb
+vendor/lib64/mediadrm/libwvdrmengine.so|5fdae5cda605a6498dbfa7b8e68175d4b159e2ed
 
 # Widevine DRM firmware
 vendor/firmware/tzhdcp.b00
