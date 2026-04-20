@@ -10664,7 +10664,7 @@
         </string-array>
     </carrier_config>
     <carrier_config mcc="520" mnc="00">
-        <string name="s_config_enable_ut_allowed_networks_string">3G,LTE</string>
+        <string name="s_config_enable_ut_allowed_networks_string">3G,LTE,NR</string>
         <string-array name="carrier_metered_apn_types_strings" num="3">
             <item value="default" />
             <item value="dun" />
@@ -10676,12 +10676,13 @@
         <boolean name="gsm_cdma_calls_can_be_hd_audio" value="true" />
         <boolean name="use_only_rsrp_for_lte_signal_bar_bool" value="true" />
         <boolean name="carrier_default_wfc_ims_roaming_enabled_bool" value="false" />
-        <string-array name="s_preferred_network_mode_rat_names_string_array" num="6">
+        <string-array name="s_preferred_network_mode_rat_names_string_array" num="7">
             <item value="2G" />
             <item value="3G" />
             <item value="CDMA" />
             <item value="EvDo" />
             <item value="4G" />
+            <item value="5G NR" />
             <item value="TDSCDMA" />
         </string-array>
         <boolean name="ignore_data_enabled_changed_for_video_calls" value="true" />
@@ -10696,7 +10697,7 @@
         <boolean name="carrier_default_wfc_ims_roaming_enabled_bool" value="false" />
     </carrier_config>
     <carrier_config mcc="520" mnc="03">
-        <string name="s_config_enable_ut_allowed_networks_string">3G,LTE</string>
+        <string name="s_config_enable_ut_allowed_networks_string">3G,LTE,NR</string>
         <string-array name="carrier_metered_apn_types_strings" num="3">
             <item value="default" />
             <item value="dun" />
@@ -10709,17 +10710,18 @@
         <boolean name="gsm_cdma_calls_can_be_hd_audio" value="true" />
         <boolean name="use_only_rsrp_for_lte_signal_bar_bool" value="true" />
         <boolean name="carrier_default_wfc_ims_roaming_enabled_bool" value="false" />
-        <string-array name="s_preferred_network_mode_rat_names_string_array" num="6">
+        <string-array name="s_preferred_network_mode_rat_names_string_array" num="7">
             <item value="2G" />
             <item value="3G" />
             <item value="CDMA" />
             <item value="EvDo" />
             <item value="4G" />
+            <item value="5G NR" />
             <item value="TDSCDMA" />
         </string-array>
     </carrier_config>
     <carrier_config mcc="520" mnc="04">
-        <string name="s_config_enable_ut_allowed_networks_string">3G,LTE</string>
+        <string name="s_config_enable_ut_allowed_networks_string">3G,LTE,NR</string>
         <string-array name="carrier_metered_apn_types_strings" num="3">
             <item value="default" />
             <item value="dun" />
@@ -10732,17 +10734,18 @@
         <boolean name="gsm_cdma_calls_can_be_hd_audio" value="true" />
         <boolean name="use_only_rsrp_for_lte_signal_bar_bool" value="true" />
         <boolean name="carrier_default_wfc_ims_roaming_enabled_bool" value="false" />
-        <string-array name="s_preferred_network_mode_rat_names_string_array" num="6">
+        <string-array name="s_preferred_network_mode_rat_names_string_array" num="7">
             <item value="2G" />
             <item value="3G" />
             <item value="CDMA" />
             <item value="EvDo" />
             <item value="4G" />
+            <item value="5G NR" />
             <item value="TDSCDMA" />
         </string-array>
     </carrier_config>
     <carrier_config mcc="520" mnc="05">
-        <string name="s_config_enable_ut_allowed_networks_string">3G,LTE</string>
+        <string name="s_config_enable_ut_allowed_networks_string">3G,LTE,NR</string>
         <string-array name="carrier_metered_apn_types_strings" num="3">
             <item value="default" />
             <item value="dun" />
@@ -10755,12 +10758,13 @@
         <boolean name="gsm_cdma_calls_can_be_hd_audio" value="true" />
         <boolean name="use_only_rsrp_for_lte_signal_bar_bool" value="true" />
         <boolean name="carrier_default_wfc_ims_roaming_enabled_bool" value="false" />
-        <string-array name="s_preferred_network_mode_rat_names_string_array" num="6">
+        <string-array name="s_preferred_network_mode_rat_names_string_array" num="7">
             <item value="2G" />
             <item value="3G" />
             <item value="CDMA" />
             <item value="EvDo" />
             <item value="4G" />
+            <item value="5G NR" />
             <item value="TDSCDMA" />
         </string-array>
     </carrier_config>
@@ -10777,12 +10781,13 @@
         </string-array>
         <boolean name="gsm_cdma_calls_can_be_hd_audio" value="true" />
         <boolean name="use_only_rsrp_for_lte_signal_bar_bool" value="true" />
-        <string-array name="s_preferred_network_mode_rat_names_string_array" num="6">
+        <string-array name="s_preferred_network_mode_rat_names_string_array" num="7">
             <item value="2G" />
             <item value="3G" />
             <item value="CDMA" />
             <item value="EvDo" />
             <item value="4G" />
+            <item value="5G NR" />
             <item value="TDSCDMA" />
         </string-array>
     </carrier_config>
@@ -10798,12 +10803,13 @@
         <boolean name="carrier_default_wfc_ims_roaming_enabled_bool" value="false" />
         <boolean name="s_show_enhanced_4g_lte_qs_bool" value="true" />
         <boolean name="s_show_volte_icon_in_status_bar_bool" value="true" />
-        <string-array name="s_preferred_network_mode_rat_names_string_array" num="6">
+        <string-array name="s_preferred_network_mode_rat_names_string_array" num="7">
             <item value="2G" />
             <item value="3G" />
             <item value="CDMA" />
             <item value="EvDo" />
             <item value="4G" />
+            <item value="5G NR" />
             <item value="TDSCDMA" />
         </string-array>
     </carrier_config>
@@ -10813,12 +10819,13 @@
         <boolean name="carrier_default_wfc_ims_roaming_enabled_bool" value="false" />
         <boolean name="s_show_enhanced_4g_lte_qs_bool" value="true" />
         <boolean name="s_show_volte_icon_in_status_bar_bool" value="true" />
-        <string-array name="s_preferred_network_mode_rat_names_string_array" num="6">
+        <string-array name="s_preferred_network_mode_rat_names_string_array" num="7">
             <item value="2G" />
             <item value="3G" />
             <item value="CDMA" />
             <item value="EvDo" />
             <item value="4G" />
+            <item value="5G NR" />
             <item value="TDSCDMA" />
         </string-array>
     </carrier_config>
