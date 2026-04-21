@@ -147,6 +147,8 @@ blob_fixups: blob_fixups_user_type = {
         'vendor/lib64/libdpps.so',
     ): blob_fixup()
         .replace_needed('libtinyxml2.so', 'libtinyxml2-v34.so'),
+    'vendor/bin/hw/vendor.semc.hardware.secd@1.0-service': blob_fixup()
+        .replace_needed('libcrypto.so', 'libcrypto-v33.so')
 }
 
 module = ExtractUtilsModule(
