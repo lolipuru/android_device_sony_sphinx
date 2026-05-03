@@ -49,28 +49,28 @@ vendor/lib64/libadsp_default_listener.so
 vendor/lib64/libadsprpc.so
 
 # ADSP modules
-vendor/lib/rfsa/adsp/capi_v2_aptX_Classic.so
-vendor/lib/rfsa/adsp/capi_v2_aptX_HD.so
-vendor/lib/rfsa/adsp/libapps_mem_heap.so
-vendor/lib/rfsa/adsp/libcamera_nn_skel.so
-vendor/lib/rfsa/adsp/libcvpdsp_skel.so
-vendor/lib/rfsa/adsp/libdsp_streamer_add_constant.so
-vendor/lib/rfsa/adsp/libdsp_streamer_binning.so
-vendor/lib/rfsa/adsp/libdspCV_skel.so
-vendor/lib/rfsa/adsp/libfastcvadsp.so
-vendor/lib/rfsa/adsp/libfastcvdsp_skel.so
-vendor/lib/rfsa/adsp/libhalide_hexagon_remote_skel.so
-vendor/lib/rfsa/adsp/libhexagon_nn_skel.so
-vendor/lib/rfsa/adsp/libscveBlobDescriptor_skel.so
-vendor/lib/rfsa/adsp/libscveObjectSegmentation_skel.so
-vendor/lib/rfsa/adsp/libscveT2T_skel.so
-vendor/lib/rfsa/adsp/libsnpe_dsp_v66_domains_v2_skel.so
-vendor/lib/rfsa/adsp/libsns_device_mode_skel.so
-vendor/lib/rfsa/adsp/libsns_low_lat_stream_skel.so
-vendor/lib/rfsa/adsp/libsomc_alfortlpserv_skel.so
-vendor/lib/rfsa/adsp/libsomc_cornfrosty_skel.so
-vendor/lib/rfsa/adsp/libVC1Dec.so
-vendor/lib/rfsa/adsp/libVC1DecDsp_skel.so
+vendor/lib/rfsa/adsp/capi_v2_aptX_Classic.so;DISABLE_DEPS
+vendor/lib/rfsa/adsp/capi_v2_aptX_HD.so;DISABLE_DEPS
+vendor/lib/rfsa/adsp/libapps_mem_heap.so;DISABLE_DEPS
+vendor/lib/rfsa/adsp/libcamera_nn_skel.so;DISABLE_DEPS
+vendor/lib/rfsa/adsp/libcvpdsp_skel.so;DISABLE_DEPS
+vendor/lib/rfsa/adsp/libdsp_streamer_add_constant.so;DISABLE_DEPS
+vendor/lib/rfsa/adsp/libdsp_streamer_binning.so;DISABLE_DEPS
+vendor/lib/rfsa/adsp/libdspCV_skel.so;DISABLE_DEPS
+vendor/lib/rfsa/adsp/libfastcvadsp.so;DISABLE_DEPS
+vendor/lib/rfsa/adsp/libfastcvdsp_skel.so;DISABLE_DEPS
+vendor/lib/rfsa/adsp/libhalide_hexagon_remote_skel.so;DISABLE_DEPS
+vendor/lib/rfsa/adsp/libhexagon_nn_skel.so;DISABLE_DEPS
+vendor/lib/rfsa/adsp/libscveBlobDescriptor_skel.so;DISABLE_DEPS
+vendor/lib/rfsa/adsp/libscveObjectSegmentation_skel.so;DISABLE_DEPS
+vendor/lib/rfsa/adsp/libscveT2T_skel.so;DISABLE_DEPS
+vendor/lib/rfsa/adsp/libsnpe_dsp_v66_domains_v2_skel.so;DISABLE_DEPS
+vendor/lib/rfsa/adsp/libsns_device_mode_skel.so;DISABLE_DEPS
+vendor/lib/rfsa/adsp/libsns_low_lat_stream_skel.so;DISABLE_DEPS
+vendor/lib/rfsa/adsp/libsomc_alfortlpserv_skel.so;DISABLE_DEPS
+vendor/lib/rfsa/adsp/libsomc_cornfrosty_skel.so;DISABLE_DEPS
+vendor/lib/rfsa/adsp/libVC1Dec.so;DISABLE_DEPS
+vendor/lib/rfsa/adsp/libVC1DecDsp_skel.so;DISABLE_DEPS
 
 # ANT+
 system/lib/com.qualcomm.qti.ant@1.0.so;MODULE_SUFFIX=_vendor
@@ -729,7 +729,7 @@ vendor/lib/libcamxtintlessalgo.so
 vendor/lib/libcom.qti.chinodeutils.so
 vendor/lib/libexcal_core.so
 vendor/lib/libexcal_system.so
-vendor/lib/libhalide_hexagon_host.so
+vendor/lib/libhalide_hexagon_host.so;DISABLE_DEPS
 vendor/lib/libhigh_dynamic_range.so
 vendor/lib/liblights-core.so
 vendor/lib/libmmcamera_faceproc.so;DISABLE_CHECKELF
@@ -764,7 +764,7 @@ vendor/lib/libsomc_mugichoco.so
 vendor/lib/libsomc_mugichocorsc.so
 vendor/lib/libsomc_parisbrest.so
 vendor/lib/libsomc_parisbrestrsc.so
-vendor/lib/libsomc_pdnserv.so
+vendor/lib/libsomc_pdnserv.so;DISABLE_DEPS
 vendor/lib/libsomc_pretzchoco.so
 vendor/lib/libsomc_pretzchocorsc.so
 vendor/lib/libsomc_raisin.so
