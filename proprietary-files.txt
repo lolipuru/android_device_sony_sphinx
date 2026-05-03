@@ -742,7 +742,7 @@ vendor/lib/libsomc_bordeaux.so
 vendor/lib/libsomc_bordeauxrsc.so
 vendor/lib/libsomc_buttercake.so
 vendor/lib/libsomc_buttercakersc.so
-vendor/lib/libsomc_camerahal.so
+vendor/lib/libsomc_camerahal.so;DISABLE_CHECKELF
 vendor/lib/libsomc_camerapal.so
 vendor/lib/libsomc_canele.so
 vendor/lib/libsomc_canelersc.so
@@ -1042,6 +1042,7 @@ vendor/lib64/vendor.qti.hardware.cvp@1.0.so
 
 # Display
 vendor/lib/libdpps.so
+vendor/lib/libqdMetaData.so:vendor/lib/libqdMetaData_sony.so;DISABLE_DEPS
 vendor/lib64/libdpps.so
 
 # Display (SEMC)

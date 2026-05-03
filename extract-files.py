@@ -61,6 +61,9 @@ lib_fixups: lib_fixups_user_type = {
         'vendor.qti.ims.rcsconfig@1.1',
         'vendor.qti.imsrtpservice@3.0',
     ): lib_fixup_vendor_suffix,
+    (
+        'libqdMetaData_sony',
+    ): lib_fixup_remove,
 }
 
 blob_fixups: blob_fixups_user_type = {
@@ -148,7 +151,11 @@ blob_fixups: blob_fixups_user_type = {
     ): blob_fixup()
         .replace_needed('libtinyxml2.so', 'libtinyxml2-v34.so'),
     'vendor/bin/hw/vendor.semc.hardware.secd@1.0-service': blob_fixup()
-        .replace_needed('libcrypto.so', 'libcrypto-v33.so')
+        .replace_needed('libcrypto.so', 'libcrypto-v33.so'),
+	(
+        'vendor/lib/libsomc_camerahal.so',
+    ): blob_fixup()
+        .replace_needed('libqdMetaData.so', 'libqdMetaData_sony.so'),
 }
 
 module = ExtractUtilsModule(
