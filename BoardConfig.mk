@@ -71,8 +71,7 @@ BOARD_KERNEL_CMDLINE := \
 	loop.max_part=7 \
 	androidboot.usbcontroller=a600000.dwc3 \
 	panic_on_err=1 \
-	androidboot.boot_devices=soc/1d84000.ufshc \
-	androidboot.selinux=permissive
+	androidboot.boot_devices=soc/1d84000.ufshc
 
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 4096

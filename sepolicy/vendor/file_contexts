@@ -27,4 +27,4 @@
 
 # TA (5g)
 /(vendor|system/vendor)/bin/ta_5g_qmi_service		u:object_r:ta_qmi_service_exec:s0
-/(vendor|system/vendor)/bin/mdm_helper_proxy		u:object_r:mdm_helper_exec:s0
+/(vendor|system/vendor)/bin/mdm_helper_proxy		u:object_r:vendor_mdm_helper_exec:s0

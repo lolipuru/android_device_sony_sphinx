@@ -1,0 +1,5 @@
+allow vendor_mdm_helper vendor_file:file execute_no_trans;
+allow vendor_mdm_helper vendor_data_file:dir rw_dir_perms;
+allow vendor_mdm_helper vendor_data_file:file { create rw_file_perms };
+allow vendor_mdm_helper tad_socket:sock_file write;
+allow vendor_mdm_helper tad:unix_stream_socket connectto;
