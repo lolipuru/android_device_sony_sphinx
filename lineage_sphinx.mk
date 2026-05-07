@@ -24,6 +24,9 @@ $(call inherit-product, device/sony/sphinx/device.mk)
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
+# Optionally opt-in mindthegapps
+$(call inherit-product-if-exists, vendor/gapps/arm64/arm64-vendor.mk)
+
 # Device identifier. This must come after all inclusions
 PRODUCT_NAME := lineage_sphinx
 PRODUCT_DEVICE := sphinx
