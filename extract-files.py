@@ -70,73 +70,32 @@ blob_fixups: blob_fixups_user_type = {
     (
         'system/lib/com.qualcomm.qti.ant@1.0.so',
         'system/lib/com.qualcomm.qti.dpm.api@1.0.so',
-        'system/lib/vendor.qti.hardware.tui_comm@1.0.so',
         'system/lib64/com.qualcomm.qti.ant@1.0.so',
         'system/lib64/com.qualcomm.qti.dpm.api@1.0.so',
-        'system/lib64/vendor.qti.hardware.tui_comm@1.0.so',
         'vendor/bin/dpmQmiMgr',
-        'vendor/bin/hw/vendor.display.color@1.0-service',
         'vendor/bin/hw/vendor.semc.hardware.charger@1.0-service',
         'vendor/bin/hw/vendor.semc.hardware.secd@1.0-service',
         'vendor/bin/hw/vendor.somc.hardware.miscta@1.0-service',
-        'vendor/bin/vppservice',
         'vendor/lib/com.qualcomm.qti.dpm.api@1.0.so',
         'vendor/lib/vendor.qti.hardware.fm@1.0.so',
         'vendor/lib/vendor.qti.hardware.soter@1.0.so',
-        'vendor/lib/vendor.qti.hardware.tui_comm@1.0.so',
-        'vendor/lib/vendor.qti.hardware.vpp@1.1.so',
-        'vendor/lib/vendor.qti.hardware.vpp@1.2.so',
-        'vendor/lib/vendor.semc.hardware.light@1.0.so',
-        'vendor/lib/vendor.somc.hardware.camera.cacao@1.0.so',
-        'vendor/lib/vendor.somc.hardware.camera.cacao@2.0.so',
-        'vendor/lib/vendor.somc.hardware.camera.cacao@3.0.so',
-        'vendor/lib/vendor.somc.hardware.camera.cacao@3.1.so',
-        'vendor/lib/vendor.somc.hardware.camera.cacao@3.2.so',
-        'vendor/lib/vendor.somc.hardware.camera.device@1.0.so',
         'vendor/lib/vendor.somc.hardware.miscta@1.0.so',
         'vendor/lib/vendor.somc.hardware.security.secd@1.0.so',
-        'vendor/lib/vendor.somc.hardware.swiqi@1.0.so',
         'vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so',
-        'vendor/lib64/vendor.display.color@1.0.so',
-        'vendor/lib64/vendor.display.color@1.1.so',
-        'vendor/lib64/vendor.display.color@1.2.so',
-        'vendor/lib64/vendor.display.postproc@1.0.so',
-        'vendor/lib64/vendor.qti.gnss@1.0.so',
-        'vendor/lib64/vendor.qti.gnss@1.1.so',
-        'vendor/lib64/vendor.qti.gnss@1.2.so',
-        'vendor/lib64/vendor.qti.gnss@2.0.so',
-        'vendor/lib64/vendor.qti.gnss@2.1.so',
         'vendor/lib64/vendor.qti.hardware.cvp@1.0.so',
         'vendor/lib64/vendor.qti.hardware.fm@1.0.so',
-        'vendor/lib64/vendor.qti.hardware.sensorscalibrate@1.0.so',
         'vendor/lib64/vendor.qti.hardware.soter@1.0.so',
-        'vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so',
-        'vendor/lib64/vendor.qti.hardware.vpp@1.1.so',
-        'vendor/lib64/vendor.qti.hardware.vpp@1.2.so',
-        'vendor/lib64/vendor.semc.hardware.light@1.0.so',
-        'vendor/lib64/vendor.semc.hardware.thermal@1.0.so',
         'vendor/lib64/vendor.somc.hardware.miscta@1.0.so',
         'vendor/lib64/vendor.somc.hardware.modemswitcher@1.0.so',
         'vendor/lib64/vendor.somc.hardware.security.secd@1.0.so',
-        'vendor/lib64/vendor.somc.hardware.swiqi@1.0.so',
-        'vendor/lib64/vendor.qti.hardware.iop@1.0.so',
-        'vendor/lib64/vendor.qti.hardware.iop@2.0.so',
         'vendor/lib/com.qualcomm.qti.ant@1.0.so',
         'vendor/lib64/com.qualcomm.qti.ant@1.0.so',
-        'vendor/lib/vendor.qti.power.pasrmanager@1.0.so',
-        'vendor/lib64/vendor.qti.power.pasrmanager@1.0.so',
     ): blob_fixup()
         .replace_needed('libhidlbase.so', 'libhidlbase-v32.so'),
     (
-        'vendor/bin/thermal-engine',
         'vendor/bin/keyprovd',
     ): blob_fixup()
         .add_needed('libhidlbase-v32.so'),
-    (
-        'vendor/lib/libgps.utils.so',
-        'vendor/lib64/libgps.utils.so',
-    ): blob_fixup()
-        .add_needed('libprocessgroup.so'),
     (
         'vendor/etc/public.libraries.txt'
     ): blob_fixup()
@@ -152,10 +111,20 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('libtinyxml2.so', 'libtinyxml2-v34.so'),
     'vendor/bin/hw/vendor.semc.hardware.secd@1.0-service': blob_fixup()
         .replace_needed('libcrypto.so', 'libcrypto-v33.so'),
-	(
-        'vendor/lib/libsomc_camerahal.so',
+    'vendor/lib/libsomc_alfortlpserv.so': blob_fixup()
+        .add_needed('liblog.so'),
+    'vendor/lib/libmorpho_dual_camera.so': blob_fixup()
+        .add_needed('libutils.so'),
+    'vendor/lib/libcammw.so': blob_fixup()
+        .replace_needed('android.hardware.light-V1-ndk_platform.so', 'android.hardware.light-V1-ndk.so'),
+    (
+        'vendor/lib/vendor.semc.hardware.extlight-V1-ndk_platform.so',
+        'vendor/lib64/vendor.semc.hardware.extlight-V1-ndk_platform.so',
+        'vendor/bin/hw/vendor.semc.hardware.extlight-service.somc',
     ): blob_fixup()
-        .replace_needed('libqdMetaData.so', 'libqdMetaData_sony.so'),
+        .replace_needed('android.hardware.light-V1-ndk_platform.so', 'android.hardware.light-V1-ndk.so'),
+    'vendor/bin/hw/vendor.somc.hardware.camera.provider@1.0-service': blob_fixup()
+        .replace_needed('libhidlbase.so', 'libhidlbase-v32.so'),
 }
 
 module = ExtractUtilsModule(

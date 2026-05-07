@@ -320,14 +320,12 @@
         <fqname>@1.0::IComponentStore/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>android.hardware.gnss</name>
-        <transport>hwbinder</transport>
-        <fqname>@1.0::IGnss/gnss_vendor</fqname>
-        <fqname>@1.1::IGnss/default</fqname>
-    </hal>
-    <hal format="hidl">
         <name>android.hardware.secure_element</name>
         <transport>hwbinder</transport>
         <fqname>@1.2::ISecureElement/SIM1</fqname>
+    </hal>
+    <hal format="aidl">
+        <name>vendor.semc.hardware.extlight</name>
+        <fqname>IExtLight/default</fqname>
     </hal>
 </manifest>
