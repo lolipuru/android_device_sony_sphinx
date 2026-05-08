@@ -387,6 +387,7 @@ $(call inherit-product, vendor/qcom/opensource/vibrator/vibrator-vendor-product.
 PRODUCT_PACKAGES += \
     android.hardware.wifi-service \
     libwpa_client \
+    hostapd \
     wpa_supplicant \
     wpa_supplicant.conf
 
