@@ -13,6 +13,9 @@ on boot
     chown system system /sys/devices/dsi_panel_driver/pre_sod_mode
     chmod 0600 /sys/devices/virtual/sec/tsp/module_id
     restorecon /sys/devices/virtual/sec/tsp/module_id
+    chown system system /sys/devices/virtual/sec/tsp/cmd
+    chmod 0600 /sys/devices/virtual/sec/tsp/cmd
+    restorecon /sys/devices/virtual/sec/tsp/cmd
 
 # Touch
 on property:dev.bootcomplete=1 && property:vendor.backlight_on=1
@@ -20,3 +23,25 @@ on property:dev.bootcomplete=1 && property:vendor.backlight_on=1
 
 on property:dev.bootcomplete=1 && property:vendor.backlight_on=0
     write /sys/devices/virtual/sec/tsp/cmd "touch_enable_irq,0"
+
+on property:vendor.enable.always_on_display=0 && property:vendor.backlight_on=1
+    write /sys/devices/virtual/sec/tsp/cmd "set_lowpower_mode,0"
+
+on property:vendor.enable.always_on_display=1 && property:vendor.backlight_on=1
+    write /sys/devices/virtual/sec/tsp/cmd "set_lowpower_mode,1"
+
+on property:dev.bootcomplete=1 && property:vendor.cover_state=1
+    write /sys/devices/virtual/sec/tsp/cmd "cover_set,1"
+
+on property:dev.bootcomplete=1 && property:vendor.cover_state=0
+    write /sys/devices/virtual/sec/tsp/cmd "cover_set,0"
+
+on property:vendor.smartstamina.touchreport=1
+    write /sys/devices/virtual/sec/tsp/cmd "stamina_enable,1"
+
+on property:vendor.smartstamina.touchreport=0
+    write /sys/devices/virtual/sec/tsp/cmd "stamina_enable,0"
+
+# Display
+on property:vendor.enable.always_on_display=*
+    write /sys/devices/dsi_panel_driver/aod_mode ${vendor.enable.always_on_display}
