@@ -1,0 +1,1 @@
+allow vendor_hal_idd_default idd:fd use;
