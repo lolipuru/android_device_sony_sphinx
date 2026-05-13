@@ -86,7 +86,6 @@ blob_fixups: blob_fixups_user_type = {
         'vendor/lib64/vendor.qti.hardware.fm@1.0.so',
         'vendor/lib64/vendor.qti.hardware.soter@1.0.so',
         'vendor/lib64/vendor.somc.hardware.miscta@1.0.so',
-        'vendor/lib64/vendor.somc.hardware.modemswitcher@1.0.so',
         'vendor/lib64/vendor.somc.hardware.security.secd@1.0.so',
         'vendor/lib/com.qualcomm.qti.ant@1.0.so',
         'vendor/lib64/com.qualcomm.qti.ant@1.0.so',

@@ -1593,11 +1593,6 @@ vendor/lib64/libqcodec2.so|423e01a8a722c0712b31a26d6e66f6e21a287666
 vendor/lib64/libstagefright_hdcp.so|c25afc7814532ab18669b87213ab149aa8cfd54f
 vendor/odm/etc/media_profiles_V1_0.xml:odm/etc/media_profiles_V1_0.xml|75f0e0aa8fab397f598421eff875f3de6452be87
 
-# Modemswitcher
-vendor/bin/hw/vendor.somc.hardware.modemswitcher@1.0-service
-vendor/etc/init/vendor.somc.hardware.modemswitcher@1.0-service.rc
-vendor/lib64/vendor.somc.hardware.modemswitcher@1.0.so
-
 # Native public libraries
 vendor/etc/public.libraries.txt
 
