@@ -88,3 +88,9 @@ sh_binary {
     src: "bin/init.qcom.sh",
     vendor: true,
 }
+
+sh_binary {
+    name: "init.qti.dcvs.sh",
+    src: "bin/init.qti.dcvs.sh",
+    vendor: true,
+}

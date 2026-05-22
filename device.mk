@@ -265,6 +265,7 @@ PRODUCT_PACKAGES += \
     init.qcom.post_boot.sh \
     init.qcom.sensors.sh \
     init.qcom.sh \
+    init.qti.dcvs.sh \
     init.recovery.qcom.rc \
     init.target.rc \
     init.qcom.rc \
