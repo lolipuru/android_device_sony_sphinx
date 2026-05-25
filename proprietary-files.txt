@@ -1602,8 +1602,17 @@ vendor/lib64/libhexagon_nn_stub.so
 vendor/lib64/libnpu.so
 
 # NFC
+vendor/bin/hw/android.hardware.nfc@1.1-service
+vendor/etc/init/android.hardware.nfc@1.1-service.rc
 vendor/etc/init/init.nfc.rc
+vendor/etc/libnfc-nci.conf
+vendor/etc/libnfc-nxp-octopus.conf
+vendor/etc/libnfc-nxp.conf
+vendor/lib/nfc_nci_nxp.so
+vendor/lib/vendor.nxp.eventprocessor@1.0.so
 vendor/lib64/libpn557_fw.so
+vendor/lib64/nfc_nci_nxp.so
+vendor/lib64/vendor.nxp.eventprocessor@1.0.so
 
 # Peripheral manager
 vendor/bin/pm-proxy|a9ed48eb4738a848a1f73ca7873a35023eac6463

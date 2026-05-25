@@ -328,4 +328,9 @@
         <name>vendor.semc.hardware.extlight</name>
         <fqname>IExtLight/default</fqname>
     </hal>
+    <hal format="hidl">
+        <name>android.hardware.nfc</name>
+        <transport>hwbinder</transport>
+        <fqname>@1.1::INfc/default</fqname>
+    </hal>
 </manifest>
