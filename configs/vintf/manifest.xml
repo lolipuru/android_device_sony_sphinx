@@ -1,4 +1,4 @@
-<manifest version="2.0" type="device" target-level="5">
+<manifest version="2.0" type="device" target-level="6">
     <hal format="hidl">
         <name>android.hardware.audio</name>
         <transport>hwbinder</transport>
@@ -117,7 +117,7 @@
     <hal format="hidl">
         <name>vendor.qti.data.factory</name>
         <transport>hwbinder</transport>
-        <fqname>@1.1::IFactory/default</fqname>
+        <fqname>@2.1::IFactory/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.qti.esepowermanager</name>
@@ -265,7 +265,7 @@
     <hal format="hidl">
         <name>vendor.qti.imsrtpservice</name>
         <transport>hwbinder</transport>
-        <fqname>@1.0::IRTPService/imsrtpservice</fqname>
+        <fqname>@3.0::IRTPService/imsrtpservice</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.semc.hardware.display</name>
@@ -278,9 +278,14 @@
         <fqname>@1.0::ISomcHook/somchook</fqname>
     </hal>
     <hal format="hidl">
-        <name>vendor.somc.hardware.security.secd</name>
-        <transport>hwbinder</transport>
-        <fqname>@1.0::IDeviceSecurity/default</fqname>
+      <name>vendor.semc.hardware.secd</name>
+      <transport>hwbinder</transport>
+      <fqname>@1.0::IDeviceSecurity/default</fqname>
+    </hal>
+    <hal format="hidl">
+      <name>vendor.somc.hardware.security.secd</name>
+      <transport>hwbinder</transport>
+      <fqname>@1.0::IDeviceSecurity/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.semc.system.idd</name>

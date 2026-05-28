@@ -36,10 +36,7 @@ def lib_fixup_vendor_suffix(lib: str, partition: str, *args, **kwargs):
 lib_fixups: lib_fixups_user_type = {
     **lib_fixups,
     (
-        'com.qualcomm.qti.ant',
-        'vendor.somc.hardware.miscta@1.0',
         'com.qualcomm.qti.dpm.api@1.0',
-        'vendor.qti.hardware.tui_comm@1.0',
         'com.qualcomm.qti.imscmservice@1.0',
         'com.qualcomm.qti.imscmservice@2.0',
         'com.qualcomm.qti.imscmservice@2.1',
@@ -55,46 +52,24 @@ lib_fixups: lib_fixups_user_type = {
         'vendor.qti.hardware.data.dynamicdds@1.0',
         'vendor.qti.hardware.data.iwlan@1.0',
         'vendor.qti.hardware.data.qmi@1.0',
-        'vendor.qti.hardware.qseecom@1.0',
+        'vendor.qti.hardware.tui_comm@1.0',
         'vendor.qti.ims.callinfo@1.0',
         'vendor.qti.ims.rcsconfig@1.0',
         'vendor.qti.ims.rcsconfig@1.1',
         'vendor.qti.imsrtpservice@3.0',
+        'vendor.somc.hardware.miscta@1.0',
     ): lib_fixup_vendor_suffix,
-    (
-        'libqdMetaData_sony',
-    ): lib_fixup_remove,
 }
 
 blob_fixups: blob_fixups_user_type = {
     (
-        'system/lib/com.qualcomm.qti.ant@1.0.so',
-        'system/lib/com.qualcomm.qti.dpm.api@1.0.so',
-        'system/lib64/com.qualcomm.qti.ant@1.0.so',
-        'system/lib64/com.qualcomm.qti.dpm.api@1.0.so',
-        'vendor/bin/dpmQmiMgr',
         'vendor/bin/hw/vendor.semc.hardware.charger@1.0-service',
-        'vendor/bin/hw/vendor.semc.hardware.secd@1.0-service',
-        'vendor/bin/hw/vendor.somc.hardware.miscta@1.0-service',
-        'vendor/lib/com.qualcomm.qti.dpm.api@1.0.so',
-        'vendor/lib/vendor.qti.hardware.fm@1.0.so',
-        'vendor/lib/vendor.qti.hardware.soter@1.0.so',
-        'vendor/lib/vendor.somc.hardware.miscta@1.0.so',
-        'vendor/lib/vendor.somc.hardware.security.secd@1.0.so',
-        'vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so',
-        'vendor/lib64/vendor.qti.hardware.cvp@1.0.so',
-        'vendor/lib64/vendor.qti.hardware.fm@1.0.so',
-        'vendor/lib64/vendor.qti.hardware.soter@1.0.so',
-        'vendor/lib64/vendor.somc.hardware.miscta@1.0.so',
-        'vendor/lib64/vendor.somc.hardware.security.secd@1.0.so',
         'vendor/lib/com.qualcomm.qti.ant@1.0.so',
         'vendor/lib64/com.qualcomm.qti.ant@1.0.so',
+        'vendor/lib/vendor.nxp.eventprocessor@1.0.so',
+        'vendor/lib64/vendor.nxp.eventprocessor@1.0.so',
     ): blob_fixup()
         .replace_needed('libhidlbase.so', 'libhidlbase-v32.so'),
-    (
-        'vendor/bin/keyprovd',
-    ): blob_fixup()
-        .add_needed('libhidlbase-v32.so'),
     (
         'vendor/etc/public.libraries.txt'
     ): blob_fixup()
@@ -122,8 +97,14 @@ blob_fixups: blob_fixups_user_type = {
         'vendor/bin/hw/vendor.semc.hardware.extlight-service.somc',
     ): blob_fixup()
         .replace_needed('android.hardware.light-V1-ndk_platform.so', 'android.hardware.light-V1-ndk.so'),
-    'vendor/bin/hw/vendor.somc.hardware.camera.provider@1.0-service': blob_fixup()
-        .replace_needed('libhidlbase.so', 'libhidlbase-v32.so'),
+    'product/lib64/libdpmframework.so': blob_fixup()
+        .replace_needed('libhidltransport.so', 'libcutils-v29.so'),
+    'system/lib64/lib-imsvideocodec.so': blob_fixup()
+        .add_needed('libgui_shim.so'),
+	(
+        'vendor/lib64/libdpps.so',
+    ): blob_fixup()
+        .replace_needed('libtinyxml2.so', 'libtinyxml2-v34.so'),
 }
 
 module = ExtractUtilsModule(
