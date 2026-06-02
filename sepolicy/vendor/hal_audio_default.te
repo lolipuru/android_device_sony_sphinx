@@ -6,3 +6,4 @@ allow hal_audio_default vendor_hal_miscta_default:binder call;
 
 allow hal_audio_default vendor_sysfs_kgsl:file r_file_perms;
 
+allow hal_audio_default audio_hweffect_device:chr_file rw_file_perms;

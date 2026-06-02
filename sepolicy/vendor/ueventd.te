@@ -1,0 +1,1 @@
+allow ueventd audio_hweffect_device:chr_file { create setattr };
