@@ -50,6 +50,8 @@ PRODUCT_PACKAGES += \
     otapreopt_script
 
 # Audio
+$(call soong_config_set, sony_effects, use_sony_extensions, true)
+
 PRODUCT_PACKAGES += \
     android.hardware.audio@6.0-impl \
     android.hardware.audio.effect@6.0-impl \

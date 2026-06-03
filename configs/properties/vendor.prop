@@ -81,6 +81,11 @@ persist.vendor.qcom.bluetooth.twsp_state.enabled=false
 ro.bluetooth.a2dp_offload.supported=true
 ro.vendor.bluetooth.wipower=false
 
+# Audio Effect
+vendor.audio.sony.effect.custom.sp_bundle=0x122
+vendor.audio.sony.effect.custom.caplus_hs=0x298
+vendor.audio.sony.effect.custom.caplus_sp=0x2B8
+
 # Camera
 persist.log.tag.libsonyec=E
 
