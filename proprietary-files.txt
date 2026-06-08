@@ -1905,6 +1905,7 @@ vendor/lib/libsns_fastRPC_util.so|29c5ad6514cc1d82332751c5917774fc798707b5
 vendor/lib/libsns_low_lat_stream_stub.so|fa2e57cba6b6639a6c6f73126f240ed3e7ef6c68
 vendor/lib/libsnsapi.so|5c8ff60b43516d01fe3b127283721fa00afc0b19
 vendor/lib/libsnsdiaglog.so|f80e3144d95cebfb22aa98e54eee4a9d96be3dfe
+vendor/lib/libssc_default_listener.so|def819068b7b54c6d31f3fc81deb5c7adae9ce2f
 vendor/lib/libssc.so|7b158ea7822db82d678b6efc82bb1712c3b1068e
 vendor/lib/sensors.ssc.so|3ac62680713070a8524c5dbd902243d450316811
 vendor/lib64/hw/vendor.qti.hardware.sensorscalibrate@1.0-impl.so|86f5ab7f8bc36265b5b6e29735a81a7d38bf2245
