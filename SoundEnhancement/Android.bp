@@ -1,0 +1,32 @@
+//
+// Copyright (C) 2026 The LineageOS Project
+//
+// SPDX-License-Identifier: Apache-2.0
+//
+
+android_app {
+    name: "SoundEnhancement",
+    certificate: "platform",
+    srcs: [
+        "src/**/*.java",
+        "src/**/*.kt",
+    ],
+    platform_apis: true,
+    privileged: true,
+    system_ext_specific: true,
+    static_libs: [
+        "androidx.core_core",
+        "androidx.preference_preference",
+        "SettingsLib",
+    ],
+    required: [
+        "privapp-permissions-sony-audio.xml",
+    ],
+}
+
+prebuilt_etc {
+    name: "privapp-permissions-sony-audio.xml",
+    sub_dir: "permissions",
+    system_ext_specific: true,
+    src: "privapp-permissions-sony-audio.xml",
+}

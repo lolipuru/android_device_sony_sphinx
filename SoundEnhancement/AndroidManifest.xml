@@ -1,0 +1,41 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.xperia.settings.audio"
+    android:sharedUserId="android.uid.system">
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <application
+        android:persistent="true" 
+        android:label="@string/app_name">
+
+        <activity
+            android:name=".AudioSettingsActivity"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.SubSettingsBase"
+            android:exported="true">
+            <intent-filter android:priority="1">
+                <action android:name="com.android.settings.action.IA_SETTINGS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <meta-data
+                android:name="com.android.settings.category"
+                android:value="com.android.settings.category.ia.sound" />
+            <meta-data
+                android:name="com.android.settings.summary"
+                android:value="@string/audio_setting_summary" />
+        </activity>
+
+        <service
+            android:name=".SonyAudioEffectService"
+            android:exported="false"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+        
+        <receiver
+            android:name=".BootReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+    </application>
+</manifest>

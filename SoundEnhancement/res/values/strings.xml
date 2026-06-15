@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (C) 2026 The LineageOS Project
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~      http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+    <!-- App Name -->
+    <string name="app_name" translatable="true">Sound Enhancements</string>
+
+    <!-- Audio Settings -->
+    <string name="audio_menu_header">Speaker Settings</string>
+    <string name="audio_setting_summary">Elevate your sound quality for a remarkable and immersive audio playback experience</string>
+
+    <!-- CA+ -->
+    <string name="clearaudio_plus_title">ClearAudio+</string>
+    <string name="clearaudio_plus_desc">Optimize sound settings</string>
+
+    <!-- S-Force -->
+    <string name="s_force3d_title">S-Force Front Surround</string>
+    <string name="s_force3d_desc">Virtually reproduce realistic surround sound</string>
+
+    <!-- xLoud -->
+    <string name="xloud_title">xLOUD™</string>
+    <string name="xloud_desc">Enhance the loudness of the internal speaker</string>
+</resources>

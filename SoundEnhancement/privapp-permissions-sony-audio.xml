@@ -1,0 +1,5 @@
+<permissions>
+    <privapp-permissions package="com.xperia.settings.audioeffects">
+        <permission name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    </permissions>
+</permissions>
