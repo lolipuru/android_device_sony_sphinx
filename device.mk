@@ -52,6 +52,7 @@ PRODUCT_PACKAGES += \
 # Audio
 $(call soong_config_set, sony_effects, use_sony_extensions, true)
 $(call soong_config_set, sony_effects, use_sony_device, true)
+$(call soong_config_set, sony_effects, use_media_vibration, true)
 
 PRODUCT_PACKAGES += \
     android.hardware.audio@6.0-impl \
