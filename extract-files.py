@@ -110,6 +110,15 @@ blob_fixups: blob_fixups_user_type = {
         'vendor/lib/libsomc_chokoballpal.so',
     ): blob_fixup()
         .replace_needed('libui.so', 'libui-v34.so'),
+    'vendor/lib64/sensors.ssc.so': blob_fixup()
+        .binary_regex_replace(
+            b'\xe8\x2b\x40\xb9\x1f\x0d\x00\x71\x81\x03\x00\x54',
+            b'\xe8\x2b\x40\xb9\x1f\x0d\x00\x71\x1f\x20\x03\xd5',
+        )
+        .binary_regex_replace(
+            b'\xe8\x23\x40\xb9\x1f\x0d\x00\x71\xe1\x01\x00\x54',
+            b'\xe8\x23\x40\xb9\x1f\x0d\x00\x71\x1f\x20\x03\xd5',
+        ),
 }
 
 module = ExtractUtilsModule(
