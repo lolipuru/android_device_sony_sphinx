@@ -5,3 +5,5 @@ genfscon sysfs /devices/platform/soc/18800000.qcom,icnss/wakeup/wakeup     u:obj
 genfscon sysfs /devices/platform/soc/171c0000.slim/tavil-slim-pgd/wakeup   u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/890000.i2c/i2c-0/0-0028/wakeup        u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/a88000.i2c/i2c-2/2-0048/wakeup        u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/0305_01.01.00/wakeup                               u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/1c08000.qcom,pcie/pci0001:00/0001:00:00.0/0001:01:00.0/0305_01.01.00_EFS/wakeup u:object_r:sysfs_wakeup:s0
