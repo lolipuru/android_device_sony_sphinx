@@ -42,15 +42,20 @@ static const std::string led_paths[]{
 
 // List of supported lights
 const static std::vector<HwLight> kAvailableLights = {AutoHwLight(LightType::BATTERY),
-                                                      AutoHwLight(LightType::NOTIFICATIONS)};
+                                                      AutoHwLight(LightType::NOTIFICATIONS),
+                                                      AutoHwLight(LightType::ATTENTION)};
 
 Lights::Lights() {
-    for (int i = 0; i < NUM_LIGHTS; i++)
-        mMaxBrightness[i] = ReadIntFromFile(led_paths[i] + "max_brightness", 0xFF);
+    for (int i = 0; i < NUM_LIGHTS; i++) {
+        uint32_t max_br = ReadIntFromFile(led_paths[i] + "max_brightness", 0xFF);
+        mMaxSingleBrightness[i] = ReadIntFromFile(led_paths[i] + "max_single_brightness", max_br);
+        mMaxMixBrightness[i] = ReadIntFromFile(led_paths[i] + "max_mix_brightness", max_br);
+    }
 }
 
 // AIDL methods
 ndk::ScopedAStatus Lights::setLightState(int32_t id, const HwLightState& state) {
+    std::lock_guard<std::mutex> lock(mLock);
     LightType type = static_cast<LightType>(id);
     switch (type) {
         case LightType::BATTERY:
@@ -59,12 +64,19 @@ ndk::ScopedAStatus Lights::setLightState(int32_t id, const HwLightState& state) 
         case LightType::NOTIFICATIONS:
             mNotification = state;
             break;
+        case LightType::ATTENTION:
+            mAttention = state;
+            break;
         default:
             return ndk::ScopedAStatus::fromExceptionCode(EX_UNSUPPORTED_OPERATION);
-            break;
     }
 
-    if (IsLit(mBattery.color))
+    // Notifications and attention take priority over Battery light
+    if (IsLit(mNotification.color))
+        setSpeakerLightLocked(mNotification);
+    else if (IsLit(mAttention.color))
+        setSpeakerLightLocked(mAttention);
+    else if (IsLit(mBattery.color))
         setSpeakerLightLocked(mBattery);
     else
         setSpeakerLightLocked(mNotification);
@@ -87,34 +99,48 @@ void Lights::setSpeakerLightLocked(const HwLightState& state) {
     green = (state.color >> 8) & 0xFF;
     blue = state.color & 0xFF;
 
+    int active_colors = (red > 0) + (green > 0) + (blue > 0);
+    bool isMixed = (active_colors >= 2);
+
     switch (state.flashMode) {
         case FlashMode::HARDWARE:
         case FlashMode::TIMED:
-            WriteToFile(RGB_CTRL_PATH "sync_state", 1);  // CONFIGURE_TO_BLINK
-            setLedBlink(RED, red, state.flashOnMs, state.flashOffMs);
-            setLedBlink(GREEN, green, state.flashOnMs, state.flashOffMs);
-            setLedBlink(BLUE, blue, state.flashOnMs, state.flashOffMs);
-            WriteToFile(RGB_CTRL_PATH "start_blink", 1);
+            if (active_colors == 0) {
+                WriteToFile(RGB_CTRL_PATH "sync_state", 0);
+                setLedBrightness(RED, 0, false);
+                setLedBrightness(GREEN, 0, false);
+                setLedBrightness(BLUE, 0, false);
+            } else {
+                WriteToFile(RGB_CTRL_PATH "sync_state", 1);  // CONFIGURE_TO_BLINK
+                if (red > 0)
+                    setLedBlink(RED, red, state.flashOnMs, state.flashOffMs, isMixed);
+                if (green > 0)
+                    setLedBlink(GREEN, green, state.flashOnMs, state.flashOffMs, isMixed);
+                if (blue > 0)
+                    setLedBlink(BLUE, blue, state.flashOnMs, state.flashOffMs, isMixed);
+                WriteToFile(RGB_CTRL_PATH "start_blink", 1);
+            }
             break;
         case FlashMode::NONE:
         default:
             WriteToFile(RGB_CTRL_PATH "sync_state", 0);  // NOT_BLINK
-            setLedBrightness(RED, red);
-            setLedBrightness(GREEN, green);
-            setLedBrightness(BLUE, blue);
+            setLedBrightness(RED, red, isMixed);
+            setLedBrightness(GREEN, green, isMixed);
+            setLedBrightness(BLUE, blue, isMixed);
             break;
     }
 
     return;
 }
 
-uint32_t Lights::getActualBrightness(led_type led, uint32_t value) {
-    return value * mMaxBrightness[led] / 0xFF;
+uint32_t Lights::getActualBrightness(led_type led, uint32_t value, bool isMixed) {
+    uint32_t max_br = isMixed ? mMaxMixBrightness[led] : mMaxSingleBrightness[led];
+    return value * max_br / 0xFF;
 }
 
-bool Lights::setLedBlink(led_type led, uint32_t value, uint32_t onMs, uint32_t offMs) {
+bool Lights::setLedBlink(led_type led, uint32_t value, uint32_t onMs, uint32_t offMs, bool isMixed) {
     bool ret = true;
-    ret = WriteStringToFile(std::to_string(getActualBrightness(led, value)) + ",0",
+    ret &= WriteStringToFile(std::to_string(getActualBrightness(led, value, isMixed)) + ",0",
                             led_paths[led] + "lut_pwm");
     ret &= WriteToFile(led_paths[led] + "step_duration", 0);
     ret &= WriteToFile(led_paths[led] + "pause_lo_multi", offMs);
@@ -122,8 +148,8 @@ bool Lights::setLedBlink(led_type led, uint32_t value, uint32_t onMs, uint32_t o
     return ret;
 }
 
-bool Lights::setLedBrightness(led_type led, uint32_t value) {
-    return WriteToFile(led_paths[led] + "brightness", getActualBrightness(led, value));
+bool Lights::setLedBrightness(led_type led, uint32_t value, bool isMixed) {
+    return WriteToFile(led_paths[led] + "brightness", getActualBrightness(led, value, isMixed));
 }
 
 // Utils

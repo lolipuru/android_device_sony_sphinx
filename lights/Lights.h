@@ -19,6 +19,8 @@
 
 #include <aidl/android/hardware/light/BnLights.h>
 
+#include <mutex>
+
 namespace aidl {
 namespace android {
 namespace hardware {
@@ -41,18 +43,21 @@ class Lights : public BnLights {
   private:
     void setSpeakerLightLocked(const HwLightState& state);
 
-    uint32_t getActualBrightness(led_type led, uint32_t value);
-    bool setLedBlink(led_type led, uint32_t value, uint32_t onMs, uint32_t offMs);
-    bool setLedBrightness(led_type led, uint32_t value);
+    uint32_t getActualBrightness(led_type led, uint32_t value, bool isMixed);
+    bool setLedBlink(led_type led, uint32_t value, uint32_t onMs, uint32_t offMs, bool isMixed);
+    bool setLedBrightness(led_type led, uint32_t value, bool isMixed);
 
     bool IsLit(uint32_t color);
     uint32_t ReadIntFromFile(const std::string& path, uint32_t defaultValue);
     bool WriteToFile(const std::string& path, uint32_t content);
 
+    std::mutex mLock;
     HwLightState mNotification;
+    HwLightState mAttention;
     HwLightState mBattery;
 
-    uint32_t mMaxBrightness[NUM_LIGHTS];
+    uint32_t mMaxSingleBrightness[NUM_LIGHTS];
+    uint32_t mMaxMixBrightness[NUM_LIGHTS];
 };
 
 }  // namespace light
