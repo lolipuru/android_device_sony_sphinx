@@ -119,6 +119,8 @@ blob_fixups: blob_fixups_user_type = {
             b'\xe8\x23\x40\xb9\x1f\x0d\x00\x71\xe1\x01\x00\x54',
             b'\xe8\x23\x40\xb9\x1f\x0d\x00\x71\x1f\x20\x03\xd5',
         ),
+    'vendor/etc/sensors/hals.conf': blob_fixup()
+        .regex_replace('libhalsensor.adux1050.somc.so\n', ''),
 }
 
 module = ExtractUtilsModule(

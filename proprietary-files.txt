@@ -1924,8 +1924,6 @@ vendor/lib64/vendor.qti.hardware.sensorscalibrate@1.0.so|f7ee0ef9805f2adda0c7724
 # Sensors
 vendor/bin/sensors_json_transfer.sh
 vendor/etc/sensors/hals.conf
-vendor/lib/libhalsensor.adux1050.somc.so
-vendor/lib64/libhalsensor.adux1050.somc.so
 
 # Sensor configs
 vendor/etc/sensors/registry/config/ak991x_dri_0.json
